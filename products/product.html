@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <header>
+        <!------------Navigation Bar------------->
+        <nav>
+            <div class="nav-right">
+                <div class="menuBar"><i class="ri-menu-line"></i></div>
+                <div class="navLogo border"><img src="../images/logo.png" alt="Amazon logo"></div>
+            </div>
+            <div class="navLocation border">
+                <div class="locationIcon"><i class="ri-map-pin-line"></i></div>
+                    <div class="location-link">
+                    <div class="nav-line-1">Deliver to</div>
+                    <div class="nav-line-2">Pakistan</div>
+                </div>
+            </div>
+    
+                <div class="searchBar">
+                    <div class="searchSelector">
+                        <select name="url" id="searchDropDownBox">
+                            <option value="AllDepartments">All</option>
+                            <option value="AllDepartments">Computer</option>
+                            <option value="AllDepartments">Personal Care</option>
+                            <option value="AllDepartments">Baby</option>
+                            <option value="AllDepartments">Home</option>
+                        </select>
+                    </div>
+                    <div class="search"><input type="text" placeholder="Search Amazon"></div>
+                    <div class="submit"><i class="ri-search-line"></i></div>
+                </div>
+    
+            <div class="langSelector border">
+                <div class="flag"></div>
+                <div class="selectLang">
+                    <select name="Language Selector" id="Language">
+                        <option value="Eng">Eng</option>
+                        <option value="Korean">코</option>
+                        <option value="Hindi">हिं</option>
+                        <option value="Urdu">اردو</option>
+                    </select>
+                </div>
+            </div>
+    
+            <div class="signin border">
+                <div class="nav-line-1">Hello, Sign in</div>
+                <div class="nav-line-2">Account & List<i class="ri-arrow-down-s-line"></i></div>
+            </div>
+    
+            <div class="orders border">
+                <div class="nav-line-1">Returns</div>
+                <div class="nav-line-2">& Orders</div>
+            </div>
+    
+            <div class="cart border">
+                <div class="nav-line-1 cartList">0</div>
+                <div class="nav-line-2 "><i class="ri-shopping-cart-line"></i>Cart</div>
+            </div>
+            <div class="nav-left">
+                <div class="signInUser">Sign in<i class="ri-user-3-line"></i></div>
+                <div class="cartAdd">
+                    <div class="navLine "><i class="ri-shopping-cart-line"></i></div>
+                </div>  
+            </div>
+        </nav>
+        <!-------------Horizontal Scrolls Bar for Mobile--------------->
+        <aside>
+            <p>Deals</p>
+            <p>Amazon Basics</p>
+            <p>Video</p>
+            <p>Buy Again</p>
+            <p>Best Seller</p>
+        </aside>
+    
+        <div class="pannel">
+            <left-pannel>
+                <p class="border"><i class="ri-menu-line">All</i></p>
+                <p class="border">Today's Deals</p>
+                <p class="border">Coustomer Service</p>
+                <p class="border">Registry</p>
+                <p class="border">Gift Cards</p>
+                <p class="border">Sell</p>
+            </left-pannel>
+            <right-pannel>
+                <p class="border">Shop the gamming Store</p>
+            </right-pannel>
+            <div class="locationDiv">
+                <i class="ri-map-pin-line">Deliver to Pakistan</i><i class="ri-arrow-down-s-line"></i>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="products">
+            <img src="images/Pond's.jpg" alt="">
+        </div>
+</main>
+    <script src="product.js"></script>
+</body>
+</html>
