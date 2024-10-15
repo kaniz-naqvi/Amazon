@@ -243,6 +243,41 @@ button{
     cursor: pointer;
 }
 
+.horizontalDiv{
+    height: 320px;
+    width: 90%;
+    border: #cccccc solid 1.5px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+    flex-direction: row;
+    margin: 10px;
+}
+.horizontalDiv .productImg {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    height:100% ; 
+    width: 40%;
+    border: 1px solid #dadada; 
+    overflow: hidden; 
+}
+.horizontalDiv .productImg img {
+    height:auto;
+    max-width: 200px;
+    max-height: 200px;
+    width:auto;
+} 
+.horizontalDiv button {
+    width: 30%;
+}
+.horizontalDiv .details{
+    width: 65%;
+}
+
+
 @media (max-width:800px) {
     /*Nav Styling for Mobile*/
     nav{
@@ -336,7 +371,7 @@ button{
         width: 100%;
         display: block;        
     }
-    .products{
+    .products, .horizontalDiv{
         height: 350px;
         width: 98%;
         border: #cccccc solid 1.5px;
@@ -368,5 +403,7 @@ button{
         width: auto;
         max-width:120px;
     }    
-    
+    .horizontalDiv button{
+        width: 100%;
+    }
 }

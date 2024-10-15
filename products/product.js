@@ -89,109 +89,223 @@ if (selectedCategory) {
 */
 let products=[
     {
-        name:"Pond's", sales:"100+", prize:7, category:"beauty, health, self care, Pond's face wash",
+        name:"Pond's", sales:"100+", price:7, category:"beauty", styleClass:"verticalDiv",
         details:" Pure Detox Facial Foam Facial Wash, 1.7 Oz (Pack of 6) | Activated Charcoal | Deep Cleansing", 
     },
     {
-        name:"L'Oreal Paris", sales:"10K+", prize:13, category:"beauty, health, self care, L'Oreal Paris Makeup Match",
+        name:"L'Oreal Paris", sales:"10K+", price:13, category:"beauty", styleClass:"verticalDiv",
         details:" Makeup True Match Lumi Glotion, Natural Glow Enhancer, Illuminator Highlighter, Bronzing Drops For a Sun-Kissed Glow, 902 Light", 
     },
     {
-        name:"e.l.f. Monochromatic Multi Stick", sales:"20k+", prize:5, category:"beauty, health, self care, e.l.f. Monochromatic Multi Stick",
+        name:"e.l.f. Monochromatic Multi Stick", sales:"20k+", price:5, category:"beauty", styleClass:"verticalDiv",
         details:", Luxuriously Creamy & Blendable Color, For Eyes, Lips & Cheeks, Dazzling Peony, 0.155 Oz (4.4g)", 
     },
     {
-        name:"Tree Hut", sales:"10k+ bought", prize:8, category:"beauty, health, self care, Tree Hut, Shea Sugar Scrub",
+        name:"Tree Hut", sales:"10k+ bought", price:8, category:"beauty", styleClass:"verticalDiv",
         details:" Shea Sugar Scrub Coco Colada, 18 oz, Ultra Hydrating and Exfoliating Scrub for Nourishing Essential Body Care", 
     },
     {
-        name:"St.Tropez", sales:"10k+", prize:46, category:"beauty, health, self care,St.Tropez, Self Tan Express Mousse",
+        name:"St.Tropez", sales:"10k+", price:46, category:"beauty", styleClass:"verticalDiv",
         details:" Self Tan Express Mousse, Fast Acting Fake Tan, Develops in 1-3 Hours, Streak-Free Finish, Vegan, Natural & Cruelty Free, 6.7 Fl Oz", 
     },
     {
-        name:"LANEIGE", sales:"5k+", prize:25, category:"beauty, health, self care, LANEIGE, Bouncy and Firm Sleeping Mask",
+        name:"LANEIGE", sales:"5k+", price:25, category:"beauty", styleClass:"verticalDiv",
         details:" Bouncy and Firm Sleeping Mask: Revitalize, Smooth, Peony & Collagen Complex, Barrier-Boosting Hydration", 
     },
     {
-        name:"BAIMEI", sales:"5k+", prize:12, category:"beauty, self care, Jade Roller & Gua Sha, BAIMEI",
+        name:"BAIMEI", sales:"5k+", price:12, category:"beauty", styleClass:"verticalDiv",
         details:" IcyMe Jade Roller & Gua Sha, Face Roller Redness Reducing Skin Care Tools, Self Care Pink Gift for Men Women, Massager for Face, Eyes, Neck, Relieve Fine Lines and Wrinkles - Rose Quartz", 
     },
     {
-        name:"FHI Heat UNbrush Detangling Brush", sales:"2k+", prize:18, category:"beauty, self care, FHI Heat UNbrush Detangling Brush",
+        name:"FHI Heat UNbrush Detangling Brush", sales:"2k+", price:18, category:"beauty", styleClass:"verticalDiv", 
         details:" for Pain-Free Brushing on All Wet or Dry Hair Types — Durable DuoFlex Anti-Static Bristles, Lightweight Handle, Vented Hair Brush", 
     },
     {
-        name:"Fisher-Price Baby", sales:"4k+", prize:10, category:"toys, toy, Babies, kids",
+        name:"Fisher-Price Baby", sales:"4k+", price:10, category:"toys", styleClass:"verticalDiv",
         details:" Learning Toy Link Squad Jam & Count Panda with Music & Lights for Ages 9+ Months, Compatible Only with Link Squad Items", 
     },
     {
-        name:"Barbie Dream Closet Playset", sales:"1k+", prize:29, category:"toys, toy, Babies, kids",
+        name:"Barbie Dream Closet Playset", sales:"1k+", price:29, category:"toys", styleClass:"verticalDiv",
         details:" with 35+ Doll Clothes & Accessories, Includes 5 Complete Looks, Pop-Up Second Level, Mirror & Laundry Chute", 
     },
     {
-        name:"Baby Einstein", sales:"10k+", prize:33, category:"toys, toy, Babies, kids",
+        name:"Baby Einstein", sales:"10k+", price:33, category:"toys", styleClass:"verticalDiv",
         details:" Sea Dreams Soother Musical Crib Toy and Sound Machine, Newborn and up", 
     },
     {
-        name:"Hasbro Gaming", sales:"9k+", prize:16, category:"toys, toy, Babies, kids",
+        name:"Hasbro Gaming", sales:"9k+", price:16, category:"toys", styleClass:"verticalDiv",
         details:" Jenga Wooden Blocks Stacking Tumbling Tower, Kids Game Ages 6 and Up (Amazon Exclusive)", 
     },
     {
-        name:"Kids Toys", sales:"20k+", prize:19, category:"toys, toy, Babies, kids",
+        name:"Kids Toys", sales:"20k+", price:19, category:"toys", styleClass:"verticalDiv",
         details:" 253 PCS Construction Race Tracks Toy for 3 4 5 6 7 8 Year Old Boys Girls, 5 PCS Construction Truck Car and Flexible Track Play Set Create A Engineering Road Games Toddler Toys Birthday Gifts", 
     },
     {
-        name:"Talking Flash Cards", sales:"8k+", prize:8, category:"toys, toy, Babies, kids",
+        name:"Talking Flash Cards", sales:"8k+", price:8, category:"toys", styleClass:"verticalDiv",
         details:" for Toddler 1 2 3 4 Year Olds, Language Learning Toys, Pocket Speech Therapy Toys, Autism Toys,  Children's Sensory Learning Educational Toys", 
     },
     {
-        name:"Sophie la girafe", sales:"6k+", prize:25, category:"toys, toy, Babies, kids",
+        name:"Sophie la girafe", sales:"6k+", price:25, category:"toys", styleClass:"verticalDiv",
         details:" | Handcrafted for 60 Years in France | Natural Rubber | Designed for Teething Babies | Awaken All 5 Senses | Easy to Clean | Pack of 1", 
     },
     {
-        name:"Disney Store Official", sales:"6k+", prize:32, category:"toys, toy, Babies, kids",
+        name:"Disney Store Official", sales:"6k+", price:32, category:"toys", styleClass:"verticalDiv",
         details:" Sheriff Woody Talking Action Figure from Toy Story, Features Sounds and Phrases from The Movies, Interacts with Other Figures and Toys", 
     },
 
 
     {
-        name:"Apple Watch Series 9", sales:"7k+", prize:100, category:"tech, wacthes, wireless tech",
+        name:"Apple Watch Series 9", sales:"7k+", price:100, category:"tech", styleClass:"verticalDiv",
         details:" [GPS 45mm] Smartwatch with Starlight Aluminum Case with Starlight Sport Band M/L. Fitness Tracker, ECG Apps, Always-On Retina Display, Water Resistant", 
     },
     {
-        name:"SOAR NCAA Airpods", sales:"8k+", prize:9, category:"tech, wacthes, wireless tech",
+        name:"SOAR NCAA Airpods", sales:"8k+", price:9, category:"tech", styleClass:"verticalDiv",
         details:" – Wireless Bluetooth Earbuds with Team Logo, Premium Sound, Long Battery Life, and Touch Controls – Perfect for Sports Fans and Music Lovers", 
     },
     {
-        name:"J-Tech Digital", sales:"1k+", prize:25, category:"tech, wacthes, wireless tech",
+        name:"J-Tech Digital", sales:"1k+", price:25, category:"tech", styleClass:"verticalDiv",
         details:" V638R Ergonomic Wired Mouse, 4 DPI Settings, RGB LED Variations, Magnetic Removable Palm Rest, 6 Button Functions, 1 Year Manufacturer Replacement Warranty", 
     },
     {
-        name:"SAMSUNG Galaxy S24 Ultra", sales:"500+", prize:29, category:"tech, wacthes, wireless tech",
+        name:"SAMSUNG Galaxy S24 Ultra", sales:"500+", price:29, category:"tech", styleClass:"verticalDiv",
         details:" Cell Phone, 256GB AI Smartphone, Unlocked Android, 200MP, 100x Zoom Cameras, Long Battery Life, S Pen, US Version, 2024, Titanium Blackw/Built-in Microphone, 30H of Playback Time", 
     },
     {
-        name:"Wyze Cam OG", sales:"10k+", prize:19, category:"tech, wacthes, wireless tech",
-        details:" Indoor/Outdoor 1080p Wi-Fi Smart Home Security Camera with Color Night Vision, Built-in Spotlight, Motion Detection, 2-Way Audio, Compatible with Alexa & Google Assistant, White", 
+        name:"Wyze Cam OG", sales:"10k+", price:19, category:"tech", styleClass:"verticalDiv",
+        details:" Indoor/Outdoor 1080p Wi-Fi Smart Home Security Camera with Color Night Vision, Built-in Spotlight, Motion Detection, Compatible with Alexa & Google Assistant, White", 
     },
     {
-        name:"SAMSUNG Galaxy SmartTag2,", sales:"6k+", prize:32, category:"tech, wacthes, wireless tech",
+        name:"SAMSUNG Galaxy SmartTag2,", sales:"6k+", price:32, category:"tech", styleClass:"verticalDiv",
         details:" Sheriff Woody Talking Action Figure from Toy Story, Features Sounds and Phrases from The Movies, Interacts with Other Figures and Toys", 
     },
     {
-        name:"Snap Circuits", sales:"1k+", prize:22, category:"tech, wacthes, wireless tech",
+        name:"Snap Circuits", sales:"1k+", price:22, category:"tech", styleClass:"verticalDiv",
         details:" Teach Tech Mech 5, Mechanical Coding Robot", 
     },
     {
-        name:"STREBITO Electronics Precision", sales:"4k+", prize:28, category:"tech, wacthes, wireless tech",
+        name:"STREBITO Electronics Precision", sales:"4k+", price:28, category:"tech", styleClass:"verticalDiv",
         details:" Screwdriver Sets 142-Piece with 120 Bits Magnetic Repair Tool Kit for iPhone, MacBook, Computer, Laptop, PC, Tablet", 
     },
+    {
+        name:"JoyJolt JoyFul", sales:"10k+", price:42, category:"kitchen", styleClass:"horizontalDiv",
+        details:" Food Storage Containers and 12 Lids), Pantry Kitchen Storage Containers, Glass Meal Prep Container for Lunch, Glass Storage Containers with Lids", 
+    },
+    {
+        name:"Table Kitchen Essentials", sales:"300+", price:40, category:"kitchen", styleClass:"horizontalDiv",
+        details:" Nonstick Interior Forged Aluminum Cookware Pots and Pans Set - Linen White - Induction Compatible", 
+    },
+    {
+        name:"Electric Sandwich Maker", sales:"7k+", price:13, category:"kitchen", styleClass:"horizontalDiv",
+        details:" with Non-Stick Plates, Indicator Lights, Cool Touch Handle, Easy to Clean and Store, Perfect for Cooking Breakfast, Grilled Cheese, Tuna Melts and Snacks, Black GPS401B", 
+    },
+    {
+        name:"Electric Salt and Pepper Grinder", sales:"50+", price:29, category:"kitchen", styleClass:"horizontalDiv",
+        details:" Set USB Rechargeable with LED Light and Base，Adjustable Coarseness, Stainless Steel Automatic Salt Pepper Mill Grinder, One Handed Operation, Kitchen", 
+    },
+    {
+        name:"Piece Bedding Collection", sales:"500+", price:26, category:"bedding", styleClass:"horizontalDiv",
+        details:" 1 Comforter, 1 Fitted Sheet, 1 Flat, 4 Pillowcases - Deep Pocket - Soft & Breathable Premium Quality - Ideal for All Seasons, Gray", 
+    },
+    {
+        name:"White Comforter", sales:"1k+", price:19, category:"bedding", styleClass:"horizontalDiv",
+        details:", Boho Tufted Shabby Chic Bedding Comforter Set, 3 Pieces Vintage Farmhouse Bed Set for All Seasons, Fluffy Soft Bedding Set with 2 Pillow Shams", 
+    },
+    {
+        name:"Queen Blanket", sales:"500+", price:50, category:"bedding", styleClass:"horizontalDiv",
+        details:" , Super Soft Plush Bedding, Luxury Bed Blanket (Core Plush Aluminum Grey, Queen)", 
+    },
+    {
+        name:"Comfort Spaces", sales:"5k+", price:39, category:"bedding", styleClass:"horizontalDiv",
+        details:" Vixie Reversible Comforter Set - Trendy Casual Geometric Quilted Cover, All Season Down Alternative Cozy Bedding, Matching Sham, Aqua/Gray, Twin/Twin XL 2 piece", 
+    },
+    {
+        name:"T-Shirt", sales:"3k+", price:9, category:"apparels", styleClass:"horizontalDiv",
+        details:"  Hanes mens Ultimate Crewneck", 
+    },
+    {
+        name:"Hoodie for Men and Women", sales:"1k+", price:7, category:"apparels", styleClass:"horizontalDiv",
+        details:"  - Officially Licensed NFL Apparel| Team Helmet", 
+    },
+    {
+        name:"Sweatshirt", sales:"500+", price:11, category:"apparels", styleClass:"horizontalDiv",
+        details:" , Fleece Pullover Sweatshirt For Women | Hanes Womens Ecosmart V-Notch Crewneck", 
+    },
+    {
+        name:"Long Sleeve", sales:"1k+", price:30, category:"apparels", styleClass:"horizontalDiv",
+        details:" Columbia Women's Bahama", 
+    },
+    {
+        name:"Men's Cotton Linen", sales:"4k+", price:23, category:"fashion", styleClass:"horizontalDiv",
+        details:" Henley Shirt Long Sleeve Hippie Casual Beach T Shirts", 
+    },
+    {
+        name:"Womens Ultra Lux Comfort", sales:"2k+", price:28, category:"fashion", styleClass:"horizontalDiv",
+        details:" with Flex Motion Trouser Pant", 
+    },
+    {
+        name:"Chain Bracelet", sales:"500+", price:65, category:"fashion", styleClass:"horizontalDiv",
+        details:" for Apple Watch, Secure, Adjustable, Apple Watch Replacement Band, Fits Most Wrists", 
+    },
+    {
+        name:"Legendary Whitetails Womens", sales:"200+", price:29, category:"fashion", styleClass:"horizontalDiv",
+        details:" Cottage Escape Flannel Long Sleeve Plaid and Solid Color Clothes, Fitted Button Down", 
+    },
+    {
+        name:"Apple Watch Series 9", sales:"300+", price:30, category:"watches", styleClass:"horizontalDiv",
+        details:" Smartwatch with Starlight Aluminum Case with Starlight Sport Band S/M. Fitness & Sleep Tracker, Crash Detection, Heart Rate Monitor", 
+    },
+    {
+        name:"Boy watch", sales:"700+", price:29, category:"watches", styleClass:"horizontalDiv",
+        details:" | Timex Unisex Weekender 38mm Watch", 
+    },
+    {
+        name:"Smart Watch", sales:"500+", price:28, category:"watches", styleClass:"horizontalDiv",
+        details:" for Men Women - 1.85''HD Screen with Make and Answer Calls, with AI Voice Assistant, SpO2/Heart Rate/Sleep Monitor, Smartwatch for Android & IOS", 
+    },
+    {
+        name:"Men's Forester Sport Watch", sales:"200+", price:20, category:"watches", styleClass:"horizontalDiv",
+        details:" with Nylon Band | Casio FT500WC-5BVCF", 
+    },        
+    {
+        name:"Half Gallon Water Bottle", sales:"2k+", price:25, category:"sports", styleClass:"horizontalDiv",
+        details:" Insulated, 64oz Insulated Water Bottle with Handle, Sports Water Jug, Fence Hook, Leak Resistant, for Baseball, Football & More", 
+    },
+    {
+        name:"Bicycle Saddle Bag", sales:"1k+", price:22, category:"sports", styleClass:"horizontalDiv",
+        details:" Under Seat 3D Shell Cycling Seat Pack for Mountain Road Bikes Black", 
+    },
+    {
+        name:"Taylormade", sales:"2k+", price:34, category:"sports", styleClass:"horizontalDiv",
+        details:" Tour Response Golf Balls", 
+    },
+    {
+        name:"Supportive Running Shoe", sales:"200+", price:29, category:"sports", styleClass:"horizontalDiv",
+        details:" | Brooks Men’s Adrenaline GTS 23", 
+    }, 
+    {
+        name:"8 Set Packing Cubes Luggage", sales:"10k+", price:28, category:"travel", styleClass:"horizontalDiv",
+        details:" Packing Organizers for Travel Accessories-Cream", 
+    },
+    {
+        name:"Bag Backpack", sales:"500+", price:40, category:"travel", styleClass:"horizontalDiv",
+        details:" | HOTBEST Diaper Bag Backpack, Pink, Large", 
+    },
+    {
+        name:"Carry On Luggage", sales:"700+", price:29, category:"travel", styleClass:"horizontalDiv",
+        details:" 22 Inch, 22x14x9 Airline Approved, Carry On Suitcase with Wheels, Hard-shell Carry-on Luggage, Pink Small Suitcase, Hardside Luggage Carry On with Cosmetic Carry On Bag", 
+    },
+    {
+        name:"Lightweight Softside Suitcase", sales:"500+", price:39, category:"travel", styleClass:"horizontalDiv",
+        details:", Rolling 20 Carry On Luggage, Purple, Single", 
+    },
+
 ];
 
 let mainProducts=document.querySelector("main");
+function displayProduct1(){
 let productHTML=``;
 products.forEach(product=>{
-    productHTML+=`<div class="products">
+    productHTML+=`<div class="products ${product.styleClass}">
             <div class="productImg">
                 <img src="images/${product.name}.jpg" alt="${product.name}">
             </div>
@@ -199,10 +313,13 @@ products.forEach(product=>{
             <p>
                 <div class="produtDetails"><b>${product.name}</b>${product.details}</div>
                 <div class="pastSales"><b>${product.sales} bought</b> in past month</div>
-                <div class="prize"><sup>$</sup><b>${product.prize}</b></div>
+                <div class="price"><sup>$</sup><b>${product.price}</b></div>
             </p>
             <button>Add to cart</button>
             </div>
         </div>`
 });
 mainProducts.innerHTML = productHTML;
+}
+displayProduct1();
+ 
