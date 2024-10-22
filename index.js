@@ -109,42 +109,42 @@ leftArrow.addEventListener("click", () => {
 
 let categories= [
     {
-        name:"kitchen, coffe, kattle", value:"Kitchen & Home",
+        name:"kitchen, coffe, kattle", value:"Kitchen",
         mainImg:"kitchen-main.jpg", mainImgName:"Cooker", mainHeading:"Top categories in Kitchen appliances",
         otherImg1:"Coffee.jpg", otherImg2:"Kattle.jpg", otherImg1Name:"Coffee", otherImg2Name:"Kattles" 
     },
     {
-        name:"bedding, home storage, home decor", value:"Home & Bedding",
+        name:"bedding, home storage, home decor", value:"Bedding",
         mainImg:"home-main.jpg", mainImgName:"Bedding", mainHeading:"Shop for your home essentials",
         otherImg1:"home-storage.jpg", otherImg2:"home-decor.jpg", otherImg1Name:"Home Storage", otherImg2Name:"Home Decor"  
     },
     {
-        name:"men's vest jacket, sock, under Armour socks", value:"Fashoin & clothing",
+        name:"men's vest jacket, sock, under Armour socks", value:"Fashoin",
         mainImg:"Under Armour Socks.jpg", mainImgName:"Under Armour Socks", mainHeading:"Products in Apparel internationally",
         otherImg1:"Cotton Blend Sock.jpg", otherImg2:"Men's Vest Jacket.jpg", otherImg1Name:"Sock 3 Pack", otherImg2Name:"Men's Vest Jacket"  
     },
     {
-        name:"gaming pcs, xbox consoles, Gaming headsets", value:"tech & gamming",
+        name:"gaming pcs, xbox consoles, Gaming headsets", value:"tech",
         mainImg:"main-game.jpg", mainImgName:"Gaming PCs", mainHeading:"Get your game on",
         otherImg1:"Xbox Consoles.jpg", otherImg2:"Gaming Headsets.jpg", otherImg1Name:"Xbox Consoles", otherImg2Name:"GamingHeadsets"  
     },
     {
-        name:"mini puff, beauty steals, lip sleeping mask, tinted lip Oil", value:"Makeup & beauty",
+        name:"mini puff, beauty steals, lip sleeping mask, tinted lip Oil", value:"beauty",
         mainImg:"Lip Sleeping Mask.jpg", mainImgName:"Lip Sleeping Mask", mainHeading:"Beauty steals",
         otherImg1:"Tinted Lip Oil.jpg", otherImg2:"Mini Puff.jpg", otherImg1Name:"Tinted Lip Oil", otherImg2Name:"Mini Puff"  
     },
     {
-        name:"health and beauty, dining, refresh your space, home ", value:"Home & Decor",
+        name:"health and beauty, dining, refresh your space, home ", value:"Home & kitchen",
         mainImg:"Home.jpg", mainImgName:"Home", mainHeading:"Refresh your space",
         otherImg1:"Health and Beauty.jpg", otherImg2:"Dining.jpg", otherImg1Name:"Health & Beauty", otherImg2Name:"Dining"  
     },
     {
-        name:"men's sneaker, pantes, ladies shoes", value:"Fashion & Shoes",
+        name:"men's sneaker, pantes, ladies shoes", value:"Fashion",
         mainImg:"fashion-main.jpg", mainImgName:"Men's Sneaker", mainHeading:"Shop deals in Fashion ",
         otherImg1:"shoes.jpg", otherImg2:"pantes.jpg", otherImg1Name:"Ladies shoes", otherImg2Name:"Pantes"  
     },
     {
-        name:"Fisher-Price Toddler Toy, Pantes, Ladies shoes", value:"Toys",
+        name:"Fisher-Price Toddler Toy", value:"toys",
         mainImg:"Fisher-Price Toddler Toy.jpg", mainImgName:"Fisher-Price Toddler Toy ", mainHeading:"Toys",
         otherImg1:"toys.jpg", otherImg2:"LeapTop Touch.jpg", otherImg1Name:"Toys", otherImg2Name:"LeapTop Touch"  
     },
@@ -190,7 +190,7 @@ let categories3=[
         div2ndImg1:"Headphones", div2ndImg2:"Tablets", 
     },
     {
-        mainHeading:"Level up your beauty routine", name:"beauty routine, Level up, Mirrors, Brushes", value:"Beauty & Makeup",
+        mainHeading:"Level up your beauty routine", name:"beauty routine, Level up, Mirrors, Brushes", value:"Beauty",
         div1stImg1:"MakeUp", div1stImg2:"Sponges",
         div2ndImg1:"Mirrors", div2ndImg2:"Brushes", 
     },
