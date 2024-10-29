@@ -98,13 +98,11 @@ const leftArrow=document.querySelector(".leftArrow");
 rightArrow.addEventListener("click", () => {
     index = (index + 1) % desktopImages.length; 
     mainImg.style.backgroundImage = desktopImages[index];
-    console.log(index);
 });
 
 leftArrow.addEventListener("click", () => {
     index = (index - 1 + desktopImages.length) % desktopImages.length; 
     mainImg.style.backgroundImage = desktopImages[index];
-    console.log(index);
 });
 
 let categories= [
