@@ -114,7 +114,7 @@ let products=[
     },
     {
         name:"BAIMEI", sales:"5k+", price:12, category:"beauty", styleClass:"verticalDiv",
-        details:" IcyMe Jade Roller & Gua Sha, Face Roller Redness Reducing Skin Care Tools, Self Care Pink Gift for Men Women, Massager for Face, Eyes, Neck, Relieve Fine Lines and Wrinkles - Rose Quartz", 
+        details:" IcyMe Jade Roller & Gua Sha, Face Roller Redness Reducing Skin Care Tools, Self Care Pink Gift for Men Women, Massager for Face, Eyes, Neck, Rose Quartz", 
     },
     {
         name:"FHI Heat UNbrush Detangling Brush", sales:"2k+", price:18, category:"beauty", styleClass:"verticalDiv", 
@@ -138,11 +138,11 @@ let products=[
     },
     {
         name:"Kids Toys", sales:"20k+", price:19, category:"toys", styleClass:"verticalDiv",
-        details:" 253 PCS Construction Race Tracks Toy for 3 4 5 6 7 8 Year Old Boys Girls, 5 PCS Construction Truck Car and Flexible Track Play Set Create A Engineering Road Games Toddler Toys Birthday Gifts", 
+        details:" 253 PCS Construction Race Tracks Toy for Boys Girls, Flexible Track Play Set Create A Engineering Road Games Toddler Toys Birthday Gifts", 
     },
     {
         name:"Talking Flash Cards", sales:"8k+", price:8, category:"toys", styleClass:"verticalDiv",
-        details:" for Toddler 1 2 3 4 Year Olds, Language Learning Toys, Pocket Speech Therapy Toys, Autism Toys,  Children's Sensory Learning Educational Toys", 
+        details:" for Toddler 1 2 3 4 Year Olds, Language Learning Toys, Pocket Speech Therapy Toys, Children's Sensory Learning Educational Toys", 
     },
     {
         name:"Sophie la girafe", sales:"6k+", price:25, category:"toys", styleClass:"verticalDiv",
@@ -156,7 +156,7 @@ let products=[
 
     {
         name:"Apple Watch Series 9", sales:"7k+", price:100, category:"tech", styleClass:"verticalDiv",
-        details:" [GPS 45mm] Smartwatch with Starlight Aluminum Case with Starlight Sport Band M/L. Fitness Tracker, ECG Apps, Always-On Retina Display, Water Resistant", 
+        details:" [GPS 45mm] Smartwatch with Starlight Aluminum Case with Starlight Sport Band M/L. Always-On Retina Display, Water Resistant", 
     },
     {
         name:"SOAR NCAA Airpods", sales:"8k+", price:9, category:"tech", styleClass:"verticalDiv",
@@ -164,15 +164,15 @@ let products=[
     },
     {
         name:"J-Tech Digital", sales:"1k+", price:25, category:"tech", styleClass:"verticalDiv",
-        details:" V638R Ergonomic Wired Mouse, 4 DPI Settings, RGB LED Variations, Magnetic Removable Palm Rest, 6 Button Functions, 1 Year Manufacturer Replacement Warranty", 
+        details:" V638R Ergonomic Wired Mouse, 4 DPI Settings, 6 Button Functions, 1 Year Manufacturer Replacement Warranty", 
     },
     {
         name:"SAMSUNG Galaxy S24 Ultra", sales:"500+", price:29, category:"tech", styleClass:"verticalDiv",
-        details:" Cell Phone, 256GB AI Smartphone, Unlocked Android, 200MP, 100x Zoom Cameras, Long Battery Life, S Pen, US Version, 2024, Titanium Blackw/Built-in Microphone, 30H of Playback Time", 
+        details:" Cell Phone, 256GB AI Smartphone, 100x Zoom Cameras, Long Battery Life, S Pen, US Version, 2024, Titanium Blackw/Built-in Microphone", 
     },
     {
         name:"Wyze Cam OG", sales:"10k+", price:19, category:"tech", styleClass:"verticalDiv",
-        details:" Indoor/Outdoor 1080p Wi-Fi Smart Home Security Camera with Color Night Vision, Built-in Spotlight, Motion Detection, Compatible with Alexa & Google Assistant, White", 
+        details:" Indoor/Outdoor 1080p Wi-Fi Smart Home Security Camera with Color Night Vision, Compatible with Alexa & Google Assistant, White", 
     },
     {
         name:"SAMSUNG Galaxy SmartTag2,", sales:"6k+", price:32, category:"tech", styleClass:"verticalDiv",
@@ -196,11 +196,11 @@ let products=[
     },
     {
         name:"Electric Sandwich Maker", sales:"7k+", price:13, category:"kitchen", styleClass:"horizontalDiv",
-        details:" with Non-Stick Plates, Indicator Lights, Cool Touch Handle, Easy to Clean and Store, Perfect for Cooking Breakfast, Grilled Cheese, Tuna Melts and Snacks, Black GPS401B", 
+        details:" with Non-Stick Plates, Indicator Lights, Cool Touch Handle, Easy to Clean and Store, Perfect for Cooking Breakfast, Grilled Cheese", 
     },
     {
         name:"Electric Salt and Pepper Grinder", sales:"50+", price:29, category:"kitchen", styleClass:"horizontalDiv",
-        details:" Set USB Rechargeable with LED Light and Base，Adjustable Coarseness, Stainless Steel Automatic Salt Pepper Mill Grinder, One Handed Operation, Kitchen", 
+        details:" Set USB Rechargeable with LED Light and Base, Stainless Steel Automatic Salt Pepper Mill Grinder, One Handed Operation, Kitchen", 
     },
     {
         name:"Piece Bedding Collection", sales:"500+", price:26, category:"bedding", styleClass:"horizontalDiv",
@@ -216,7 +216,7 @@ let products=[
     },
     {
         name:"Comfort Spaces", sales:"5k+", price:39, category:"bedding", styleClass:"horizontalDiv",
-        details:" Vixie Reversible Comforter Set - Trendy Casual Geometric Quilted Cover, All Season Down Alternative Cozy Bedding, Matching Sham, Aqua/Gray, Twin/Twin XL 2 piece", 
+        details:" Vixie Reversible Comforter Set -All Season Down Alternative Cozy Bedding, Matching Sham, Aqua/Gray, Twin/Twin XL 2 piece", 
     },
     {
         name:"T-Shirt", sales:"3k+", price:9, category:"apparels", styleClass:"horizontalDiv",
@@ -252,7 +252,7 @@ let products=[
     },
     {
         name:"Apple Watch Series 9", sales:"300+", price:30, category:"watches", styleClass:"horizontalDiv",
-        details:" Smartwatch with Starlight Aluminum Case with Starlight Sport Band S/M. Fitness & Sleep Tracker, Crash Detection, Heart Rate Monitor", 
+        details:" Smartwatch with Starlight Aluminum Case with Starlight Sport Band S/M. Fitness & Sleep Tracker, Heart Rate Monitor", 
     },
     {
         name:"Boy watch", sales:"700+", price:29, category:"watches", styleClass:"horizontalDiv",
@@ -298,11 +298,61 @@ let products=[
         name:"Lightweight Softside Suitcase", sales:"500+", price:39, category:"travel", styleClass:"horizontalDiv",
         details:", Rolling 20 Carry On Luggage, Purple, Single", 
     },
+    {
+        name:"Greenco Corner Shelf", sales:"1k+", price:24, category:"decore", styleClass:"horizontalDiv",
+        details:", Easy-to-Assemble Floating Wall Mount Shelves for Offices, Bedrooms, Bathrooms, Kitchens, Living Rooms and Dorm Rooms", 
+    },
+    {
+        name:"White Ceramic Vase", sales:"4k+", price:20, category:"decore", styleClass:"horizontalDiv",
+        details:",  Hollow Round Matte Pampas Flower Vases for Boho Home Wedding Party Room Dinner Table Shelf Decor (2pcs)", 
+    },
+    {
+        name:"Kate Aspen White Vintage", sales:"2k+", price:12, category:"decore", styleClass:"horizontalDiv",
+        details:", Easy-to-Assemble Floating Wall Mount Shelves for Offices, Bedrooms, Bathrooms, Kitchens, Living Rooms and Dorm Rooms", 
+    },
+    {
+        name:"Faux Flower Swag", sales:"500+", price:17, category:"decore", styleClass:"horizontalDiv",
+        details:" Set of 2 for Wedding Welcome Signs Floral Swag Wedding Reception Ceremony Signs Decor (White)", 
+    },
+    {
+        name:"The 48 Laws of Power", sales:"500+", price:14, category:"books", styleClass:"horizontalDiv",
+        details:` <br/>
+        "Never take your position for granted and never let any favors you receive go to your head."<b> (Highlighted by 29,023 Kindle readers)</b> `, 
+    },
+    {
+        name:"Atomic Habits", sales:"1k+", price:13, category:"books", styleClass:"horizontalDiv",
+        details:": An Easy & Proven Way to Build Good Habits & Break Bad Ones", 
+    },
+    {
+        name:"Mindset", sales:"2k+", price:18, category:"books", styleClass:"horizontalDiv",
+        details:" Updated Edition: Changing The Way You think To Fulfil Your Potential", 
+    },
+    {
+        name:"7 hobbit of highly effective people", sales:"5k", price:11, category:"books", styleClass:"horizontalDiv",
+        details:" -Habit Tracker: (Life goals, Daily habits journal, Goal setting) ", 
+    },
+    {
+        name:"The Power of Discipline", sales:"1k+", price:17, category:"books", styleClass:"horizontalDiv",
+        details:" : How to Use Self Control and Mental Toughness to Achieve Your Goals", 
+    },
+    {
+        name:"The Psychology of Money", sales:"3k+", price:10, category:"books", styleClass:"horizontalDiv",
+        details:`: "There is no reason to risk what you have and need for what you don't have and don't need."<b>(Highlighted by 35,838 Kindle readers)</b>`, 
+    },
+    {
+        name:"Stop Bad Overthinking", sales:"500+", price:16, category:"books", styleClass:"horizontalDiv",
+        details:" Learn the Secrets to Small Talk, Business, Management, Sales & Social Conversations & How to Make Real Friends (Communication Skills)", 
+    },
+    {
+        name:"The Mountain Is You", sales:"700+", price:17, category:"books", styleClass:"horizontalDiv",
+        details:": Transforming Self-Sabotage into Self-Mastery", 
+    },
 
 ];
 
 let mainProducts=document.querySelector("main");
-function displayProduct1(){
+let productsCategories="";
+function displayProduct(){
 let productHTML=``;
 products.forEach(product=>{
     productHTML+=`<div class="products ${product.styleClass}">
@@ -317,9 +367,16 @@ products.forEach(product=>{
             </p>
             <button>Add to cart</button>
             </div>
-        </div>`
+        </div>`;
 });
 mainProducts.innerHTML = productHTML;
 }
-displayProduct1();
- 
+displayProduct();
+let product=document.querySelectorAll(".products");
+product.forEach(pro=>{
+    pro.addEventListener("click",()=>{
+    const productName = product.name; 
+            window.location.href = `product-details.html?name=${encodeURIComponent(productName)}`;
+})
+});
+

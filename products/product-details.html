@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> </title>
+    <link rel="stylesheet" href="product-details.css">
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
     rel="stylesheet"
     />
-    <link rel="stylesheet" href="product.css">
 </head>
 <body>
-    <header>
-        <!------------Navigation Bar------------->
+    <!------------Navigation Bar------------->
     <nav>
         <div class="nav-right">
             <div class="menuBar"><i class="ri-menu-line"></i></div>
@@ -25,7 +24,7 @@
                 <div class="nav-line-2">Pakistan</div>
             </div>
         </div>
-
+            <img src="../Flags/" alt="">
             <div class="searchBar">
                 <div class="searchSelector">
                     <select name="url" id="searchDropDownBox">
@@ -73,37 +72,56 @@
             </div>  
         </div>
     </nav>
-        <!-------------Horizontal Scrolls Bar for Mobile--------------->
-        <aside>
-            <p>Deals</p>
-            <p>Amazon Basics</p>
-            <p>Video</p>
-            <p>Buy Again</p>
-            <p>Best Seller</p>
-        </aside>
-    
-        <div class="pannel">
-            <left-pannel>
-                <p class="border"><i class="ri-menu-line">All</i></p>
-                <p class="border">Today's Deals</p>
-                <p class="border">Coustomer Service</p>
-                <p class="border">Registry</p>
-                <p class="border">Gift Cards</p>
-                <p class="border">Sell</p>
-            </left-pannel>
-            <right-pannel>
-                <p class="border">Shop the gamming Store</p>
-            </right-pannel>
-            <div class="locationDiv">
-                <i class="ri-map-pin-line">Deliver to Pakistan</i><i class="ri-arrow-down-s-line"></i>
+    <aside>
+        <p>Deals</p>
+        <p>Amazon Basics</p>
+        <p>Video</p>
+        <p>Buy Again</p>
+        <p>Best Seller</p>
+    </aside>
+
+    <div class="pannel">
+        <left-pannel>
+            <p class="border"><i class="ri-menu-line">All</i></p>
+            <p class="border">Today's Deals</p>
+            <p class="border">Coustomer Service</p>
+            <p class="border">Registry</p>
+            <p class="border">Gift Cards</p>
+            <p class="border">Sell</p>
+        </left-pannel>
+        <right-pannel>
+            <p class="border">Shop the gamming Store</p>
+        </right-pannel>
+        <div class="locationDiv">
+            <i class="ri-map-pin-line">Deliver to Pakistan</i><i class="ri-arrow-down-s-line"></i>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="discrption">
+        <div class="img">
+            <img src="images/Apple Watch Series 9.jpg" alt="">
+        </div>
+        <div class="details">
+           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea facilis beatae assumenda pariatur temporibus nostrum, hic magni deserunt</p>
+           <div class="sale">10K bought past month</div>
+           <hr/>
+        </div>
+        <div class="cart-btn">
+            <div class="date">Delivery <b>Tuesday, November 5</b></div>
+            <div class="loc"><i class="ri-map-pin-line"></i> Deliver to Pakistan</div>
+            <div class="stock">In Stock</div>
+            <div class="quantity">
+                <select name="quantity">
+                    <option value="" disabled selected>Quantity:1</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
             </div>
+            <div class="btn"><button>Add to Cart</button></div>
         </div>
-    </header>
-    <main>
-        <div class="products">
-            <img src="../Flags/" alt="">
-        </div>
+    </div>
 </main>
-    <script src="product.js"></script>
+    <script src="product-details.js"></script>
 </body>
 </html>
