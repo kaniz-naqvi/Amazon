@@ -112,12 +112,12 @@ let categories= [
         otherImg1:"Coffee.jpg", otherImg2:"Kattle.jpg", otherImg1Name:"Coffee", otherImg2Name:"Kattles" 
     },
     {
-        name:"bedding, home storage, home decor", value:"Bedding",
+        name:"bedding, home storage, home decor", value:"Bedding decore",
         mainImg:"home-main.jpg", mainImgName:"Bedding", mainHeading:"Shop for your home essentials",
         otherImg1:"home-storage.jpg", otherImg2:"home-decor.jpg", otherImg1Name:"Home Storage", otherImg2Name:"Home Decor"  
     },
     {
-        name:"men's vest jacket, sock, under Armour socks", value:"Fashoin",
+        name:"men's vest jacket, sock, under Armour socks", value:"fashion",
         mainImg:"Under Armour Socks.jpg", mainImgName:"Under Armour Socks", mainHeading:"Products in Apparel internationally",
         otherImg1:"Cotton Blend Sock.jpg", otherImg2:"Men's Vest Jacket.jpg", otherImg1Name:"Sock 3 Pack", otherImg2Name:"Men's Vest Jacket"  
     },
@@ -132,12 +132,12 @@ let categories= [
         otherImg1:"Tinted Lip Oil.jpg", otherImg2:"Mini Puff.jpg", otherImg1Name:"Tinted Lip Oil", otherImg2Name:"Mini Puff"  
     },
     {
-        name:"health and beauty, dining, refresh your space, home ", value:"Home & kitchen",
+        name:"health and beauty, dining, refresh your space, home ", value:"decore kitchen",
         mainImg:"Home.jpg", mainImgName:"Home", mainHeading:"Refresh your space",
         otherImg1:"Health and Beauty.jpg", otherImg2:"Dining.jpg", otherImg1Name:"Health & Beauty", otherImg2Name:"Dining"  
     },
     {
-        name:"men's sneaker, pantes, ladies shoes", value:"Fashion",
+        name:"men's sneaker, pantes, ladies shoes", value:"Fashion shoes",
         mainImg:"fashion-main.jpg", mainImgName:"Men's Sneaker", mainHeading:"Shop deals in Fashion ",
         otherImg1:"shoes.jpg", otherImg2:"pantes.jpg", otherImg1Name:"Ladies shoes", otherImg2Name:"Pantes"  
     },
@@ -183,7 +183,7 @@ displayImagesOf1stCategory(categories);
 //categories3 divs
 let categories3=[
     {
-        mainHeading:"Wireless Tech", name:"Smartphones,Wireless Tech,Watches, Tablets, Headphones", value:"tech",
+        mainHeading:"Wireless Tech", name:"Smartphones,Wireless Tech,Watches, Tablets, Headphones", value:"tech watches",
         div1stImg1:"Smartphones", div1stImg2:"Watches",
         div2ndImg1:"Headphones", div2ndImg2:"Tablets", 
     },
@@ -193,12 +193,12 @@ let categories3=[
         div2ndImg1:"Mirrors", div2ndImg2:"Brushes", 
     },
     {
-        mainHeading:"Fantastic Finds for Home",name:"Fantastic Finds for Home, Kitchen, Plates, Smart Home", value:"Home & Kitchen",
+        mainHeading:"Fantastic Finds for Home",name:"Fantastic Finds for Home, Kitchen, Plates, Smart Home", value:"decore kitchen",
         div1stImg1:"Kitchen", div1stImg2:"Home Decor",
         div2ndImg1:"Plates", div2ndImg2:"Smart Home", 
     },
     {
-        mainHeading:"Most-loved travel essentials", name:"Most-loved travel essentials, Backpacks, Suitcases, Accessories, Handbags", value:"Bags",
+        mainHeading:"Most-loved travel essentials", name:"Most-loved travel essentials, Backpacks, Suitcases, Accessories, Handbags", value:"travel",
         div1stImg1:"Backpacks", div1stImg2:"Suitcases",
         div2ndImg1:"Accessories", div2ndImg2:"Handbags", 
     },
@@ -208,7 +208,7 @@ let categories3=[
         div2ndImg1:"Hard Drives", div2ndImg2:"PC Accessories", 
     },
     {
-        mainHeading:"Most-loved watches",name:"Most-loved watches, Men, Boys, Girls, Women, Ladies", value:"Fashion",
+        mainHeading:"Most-loved watches",name:"Most-loved watches, Men, Boys, Girls, Women, Ladies", value:"Fashion watches",
         div1stImg1:"Women Watches", div1stImg2:"Men Watches",
         div2ndImg1:"Boy Watches", div2ndImg2:"Girls Watches", 
     },
@@ -218,7 +218,7 @@ let categories3=[
         div2ndImg1:"Exercise & Fitness", div2ndImg2:"Golf", 
     },
     {
-        mainHeading:"New home arrivals",name:"New home arrivals, Kitchen & Dining, Improvement, Decor, Bedding & Bath", value:"Home ",
+        mainHeading:"New home arrivals",name:"New home arrivals, Kitchen & Dining, Improvement, Decor, Bedding & Bath", value:"bedding kitchen decore",
         div1stImg1:"Kitchen & Dining", div1stImg2:"Bedding & Bath",
         div2ndImg1:"Home Improvement", div2ndImg2:"Decor", 
     },
@@ -272,5 +272,9 @@ productsCategories.forEach((product) => {
         window.location.href = `products/product.html?category=${value}`;
     });
 });
+let dropdown = document.getElementById("searchDropDownBox");
 
-
+dropdown.addEventListener("change", () => {
+    let selectedValue = dropdown.value; // Get the selected value
+    window.location.href = `products/product.html?category=${selectedValue}`; // Navigate to the new URL
+});
