@@ -60,33 +60,13 @@ function changeFlag() {
             break;
     }
 }
-/*function getCategoryFromURL() {
-    const urlParams = new URLSearchParams(window.location.search); // Read URL parameters
-    return urlParams.get('category'); // Get the category value from the URL
+function getCategoryFromURL() {
+    const urlParams = new URLSearchParams(window.location.search); // Parse URL parameters
+    return urlParams.get('category'); // Return the value of 'category' parameter if it exists
 }
-
-const selectedCategory = getCategoryFromURL();
-console.log(`Selected category: ${selectedCategory}`); // Log the selected category for debugging
 
 // Function to display products based on the selected category
-function displayProducts(category) {
-    const products = {
-        tech: ['Smartphone', 'Headphones', 'Smartwatch'],
-        beauty: ['Makeup', 'Skincare', 'Fragrance'],
-        // Add more products for each category
-    };
 
-    const productList = products[category] || []; // Get the product list for the selected category
-    const productContainer = document.querySelector('.product-container'); // Ensure this exists in product.html
-
-    productContainer.innerHTML = productList.map(product => `<div>${product}</div>`).join(''); // Display products
-}
-
-// Call the function to display products based on the selected category
-if (selectedCategory) {
-    displayProducts(selectedCategory);
-}
-*/
 let products=[
     {
         name:"Pond's", sales:"100+", price:7, category:"beauty", styleClass:"verticalDiv",
@@ -348,30 +328,102 @@ let products=[
         details:": Transforming Self-Sabotage into Self-Mastery", 
     },
 
-];
 
-let mainProducts=document.querySelector("main");
-let productsCategories="";
-function displayProduct(){
-let productHTML=``;
-products.forEach(product=>{
-    productHTML+=`<div class="products ${product.styleClass}">
-            <div class="productImg">
-                <img src="images/${product.name}.jpg" alt="${product.name}">
-            </div>
-            <div class="details">
-            <p>
-                <div class="produtDetails"><b>${product.name}</b>${product.details}</div>
-                <div class="pastSales"><b>${product.sales} bought</b> in past month</div>
-                <div class="price"><sup>$</sup><b>${product.price}</b></div>
-            </p>
-            <button>Add to cart</button>
-            </div>
-        </div>`;
+
+    {
+        name:"Running Shoe", sales:"700+", price:59, category:"shoes", styleClass:"horizontalDiv",
+        details:" | Under Armour Men's Charged Assert 9", 
+    },
+    {
+        name:"Sneaker", sales:"400+", price:42, category:"shoes", styleClass:"horizontalDiv",
+        details:" | Adidas Men's Racer Tr23", 
+    },
+    {
+        name:"Skechers Men's", sales:"500+", price:43, category:"shoes", styleClass:"horizontalDiv",
+        details:" Moreno Ederson Oxford", 
+    },
+    {
+        name:"Women’s Shoes", sales:"1k+", price:27, category:"shoes", styleClass:"horizontalDiv",
+        details:" | Women’s Lace Up Loafers | Comfortable & Light-Weight", 
+    },
+];
+products.forEach(element => {
+    console.log(element.category)
 });
-mainProducts.innerHTML = productHTML;
+
+let mainProducts = document.querySelector("main");
+
+// Function to display products, filtered by category
+function displayProduct(categories = []) {
+    let productHTML = ``;
+
+    // Check if categories is not empty
+    if (categories.length > 0) {
+        // Filter products based on the categories provided
+        const filteredProducts = products.filter(product => 
+            categories.includes(product.category.toLowerCase()) // Check if the product category matches any of the passed categories
+        );
+
+        // Generate HTML for each filtered product
+        filteredProducts.forEach(product => {
+            productHTML += `<div class="products ${product.styleClass}">
+                <div class="productImg">
+                    <img src="images/${product.name}.jpg" alt="${product.name}">
+                </div>
+                <div class="details">
+                <p>
+                    <div class="produtDetails"><b>${product.name}</b>${product.details}</div>
+                    <div class="pastSales"><b>${product.sales} bought</b> in past month</div>
+                    <div class="price"><sup>$</sup><b>${product.price}</b></div>
+                </p>
+                <button>Add to cart</button>
+                </div>
+            </div>`;
+        });
+    } else {
+        // If no categories are provided, show all products
+        products.forEach(product => {
+            productHTML += `<div class="products ${product.styleClass}">
+                <div class="productImg">
+                    <img src="images/${product.name}.jpg" alt="${product.name}">
+                </div>
+                <div class="details">
+                <p>
+                    <div class="produtDetails"><b>${product.name}</b>${product.details}</div>
+                    <div class="pastSales"><b>${product.sales} bought</b> in past month</div>
+                    <div class="price"><sup>$</sup><b>${product.price}</b></div>
+                </p>
+                <button>Add to cart</button>
+                </div>
+            </div>`;
+        });
+    }
+
+    // Update the main container with the filtered products
+    mainProducts.innerHTML = productHTML;
 }
-displayProduct();
+
+// Function to initialize product display
+function initProductDisplay() {
+    const category = getCategoryFromURL(); // Using the previously defined getCategoryFromURL function
+    
+    // Convert the category string to an array
+    const passedCategories = category.split(" ").map(cat => cat.trim().toLowerCase()); // Handle multiple categories
+
+    displayProduct(passedCategories); // Display products based on categories
+}
+
+// Run the display function on page load
+window.onload = initProductDisplay;
+
+let dropdown = document.getElementById("searchDropDownBox");
+
+dropdown.addEventListener("change", () => {
+    let selectedValue = dropdown.value; // Get the selected value
+    displayProduct(selectedValue) // Navigate to the new URL
+});
+
+
 let product=document.querySelectorAll(".products");
 product.forEach(pro=>{
     pro.addEventListener("click",()=>{
