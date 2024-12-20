@@ -13,157 +13,6 @@ body{
     display: flex;
     flex-direction: column;
 }
-/*Style of NavBar*/
-nav{
-    width: 100%;
-    background-color: #0f1111;
-    height: 70px;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    padding: 0;
-    margin: 0;
-}
-.menuBar{
-    display: none;
-}
-.navLogo{
-    display: flex;
-    justify-content: center;
-}
-.navLogo img{
-    height: 50px;
-    width: 100px;
-}
-.border:hover{
-    border: 1.5px solid white;
-    border-radius: 1.5px;
-    cursor: pointer;
-}
-.navLocation{
-    width: 93px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content:center;
-}
-.nav-line-1{
-    font-size: 12px;
-    color: #cccccc;
-}
-.nav-line-2{
-    font-size: 14px;
-}
-.searchBar{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 60%;
-    height: 40px;
-    background-color: #f3a847;
-    border-radius: 4px;
-}
-.searchSelector{
-    width:auto;
-    height: 100%;
-    background-color: #e6e6e6;
-    color: #0f1111;
-    border-right:1.5px solid #cccccc;  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top-left-radius:2px ;  
-    border-bottom-left-radius: 2px;
-    cursor: pointer;
-    padding: 4px;
-}
-#searchDropDownBox{
-    width: fit-content;
-    align-items: center;
-    outline: none;
-    border: none;
-    background-color: transparent;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.search{
-    width: 80%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    background-color: white;
-}
-.search input{
-    padding-left: 5px;
-    outline: none;
-    border: none;
-    background-color: transparent;
-    width: 100%;
-}
-.search input::placeholder{
-    font-size: 15px;
-    font-family: sans-serif;
-    letter-spacing: 1px;
-    font-weight: bold;
-    color: #979292;
-}
-.submit{
-    height: 100%;
-    width: 10%;
-    font-size: larger;
-    color: #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-.langSelector{
-    width: 70px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.flag{
-    background-image: url('../Flags/Amarican-Flag.webp');
-    background-position: center;
-    background-size: cover;
-    height: 16px;
-    width: 20px;
-}
-#Language{
-    outline: none;
-    border: none;
-    background-color: transparent;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #e6e6e6;
-}
-#Language option{
-    color: #000;
-}
-.signin, .orders{
-    padding: 5px;
-}
-
-.cartList{
-    text-align: center;
-    color: #f7b335;
-    font-size: 14px;
-}
-.ri-shopping-cart-line{
-    font-size: 40px;
-}
-.nav-left{
-    display: none;
-}
-.locationDiv{
-    display: none;
-}
-aside{
-    display: none;
-}
 /*styles of main section*/
 main{
     padding-top: 50px;
@@ -176,7 +25,7 @@ main{
 }
 .products{
     height: 550px;
-    width: 20em;
+    width: 18em;
     border: #cccccc solid 1.5px;
     border-radius: 4px;
     display: flex;
@@ -199,7 +48,9 @@ main{
     height: auto;
     max-height: 15em;
     width: auto;
-    max-width: 15em;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 .details{
     padding: 10px;
@@ -260,83 +111,6 @@ button{
 
 
 @media (max-width:800px) {
-    /*Nav Styling for Mobile*/
-    nav{
-        height: 120px;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        padding-left: 10px;
-        padding-right: 10px;
-        background-color: #232f3e;
-    } 
-    .menuBar {
-        display: block;
-    }
-    .nav-right{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .searchBar{
-        width: 90%;
-        order: 5;
-        margin-left: 20px;
-    }
-    .searchBar .submit{
-        border-bottom-left-radius: 4px;
-        border-top-left-radius: 4px;
-    }
-    
-    .navLocation, .langSelector,.orders, .signin, .cart{
-        display: none;
-    }
-    .nav-left{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 5px;
-        padding-right: 10px;
-    }
-    .signInUser i{
-        font-size: 35px;
-    }
-    .searchBar .search{
-        border-radius: 4px;
-        padding-left: 5px;
-    }
-    .searchBar .searchSelector{
-        display: none;
-    }
-    .searchBar .submit{
-        margin-left: 10px;
-    }
-    left-pannel, right-pannel{
-        display: none;
-    }
-    .locationDiv{
-        display: block;
-    }
-    aside {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start; /* Align to the start */
-        gap: 10px;
-        margin: 0;
-        color: #fff;
-        white-space: nowrap;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        padding-bottom: 4px;
-        scrollbar-width: none;
-        background-color: #232f3e;
-    }  
-    aside p {
-        padding-left: 10px;
-        padding-right: 10px;
-        margin: 0; 
-    } 
     main{
         padding-top: 50px;
         height: auto;
@@ -345,7 +119,7 @@ button{
     }
     .products, .horizontalDiv{
         height: 350px;
-        width: 90%;
+        width: 95%;
         border: #cccccc solid 1.5px;
         border-radius: 4px;
         display: flex;

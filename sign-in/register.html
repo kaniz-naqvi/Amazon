@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="https://static.vecteezy.com/system/resources/previews/019/136/322/non_2x/amazon-logo-amazon-icon-free-free-vector.jpg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sing-in.css" />
+    <title>Singn in</title>
+  </head>
+  <body>
+    <div class="logo">
+      <img src="../images/logo-black.webp" width="100px" height="80px" alt="" />
+    </div>
+
+    <form action="" id="Sign-upForm">
+      <h1>Create Account</h1>
+      <br />
+      <label for="username">
+        Your Name
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="First and Last name"
+          required
+        />
+      </label>
+      <label for="number">
+        Mobile Number or Email
+        <input type="text" name="email/mobile" required />
+      </label>
+      <label for="pasword">
+        Pasword
+        <input
+          type="text"
+          name="pasword"
+          placeholder="At least 6 charachters"
+        />
+        Re-enter password
+        <input type="text" name="pasword" />
+      </label>
+      <p>Already have an Account? <a id="Signin" href="#">sign in</a></p>
+      <button type="submit" class="btn">Continue</button>
+    </form>
+
+    <form action="" id="sign-inForm">
+      <h1>Sign in</h1>
+      <br />
+      <label for="number">
+        Mobile Number or Email
+        <input type="text" name="email/mobile" required />
+      </label>
+      <button type="submit" class="btn">Continue</button>
+      <fieldset>
+        <legend>New to Amazon?</legend>
+        <button class="simple-btn" onclick="showSignUp()">
+          Create new account
+        </button>
+      </fieldset>
+    </form>
+
+    <script src="sign-in.js"></script>
+  </body>
+</html>

@@ -1,92 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="shortcut icon"
+      href="https://static.vecteezy.com/system/resources/previews/019/136/322/non_2x/amazon-logo-amazon-icon-free-free-vector.jpg"
+      type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-    rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
     />
-    <link rel="stylesheet" href="product.css">
-</head>
-<body>
+    <link rel="stylesheet" href="product.css" />
+    <link rel="stylesheet" href="../nav.css" />
+  </head>
+  <body>
     <header>
-        <!------------Navigation Bar------------->
-        <nav>
-            <div class="nav-right">
-                <div class="menuBar"><i class="ri-menu-line"></i></div>
-                <div class="navLogo border"><img src="../images/logo.png" alt="Amazon logo"></div>
-            </div>
-            <div class="navLocation border">
-                <div class="locationIcon"><i class="ri-map-pin-line"></i></div>
-                    <div class="location-link">
-                    <div class="nav-line-1">Deliver to</div>
-                    <div class="nav-line-2">Pakistan</div>
-                </div>
-            </div>
-    
-                <div class="searchBar">
-                    <div class="searchSelector">
-                        <select name="url" id="searchDropDownBox">
-                            <option value=" ">All</option>
-                            <option value="kitchen">Kitchen</option>
-                            <option value="bedding">Bedding</option>
-                            <option value="fashion">Fashion</option>
-                            <option value="travel">Travel</option>
-                            <option value="tech ">Tech </option>
-                        </select>
-                    </div>
-                    <div class="search"><input type="text" placeholder="Search Amazon"></div>
-                    <div class="submit"><i class="ri-search-line"></i></div>
-                </div>
-    
-            <div class="langSelector border">
-                <div class="flag"></div>
-                <div class="selectLang">
-                    <select name="Language Selector" id="Language">
-                        <option value="Eng">US</option>
-                        <option value="Korean">한국</option>
-                        <option value="Hindi">भारत</option>
-                        <option value="Urdu">پاکستان</option>
-                    </select>
-                </div>
-            </div>
-    
-            <div class="signin border">
-                <div class="nav-line-1">Hello, Sign in</div>
-                <div class="nav-line-2">Account & List<i class="ri-arrow-down-s-line"></i></div>
-            </div>
-    
-            <div class="orders border">
-                <div class="nav-line-1">Returns</div>
-                <div class="nav-line-2">& Orders</div>
-            </div>
-    
-            <div class="cart border">
-                <div class="nav-line-1 cartList">0</div>
-                <div class="nav-line-2 "><i class="ri-shopping-cart-line"></i>Cart</div>
-            </div>
-            <div class="nav-left">
-                <div class="signInUser">Sign in<i class="ri-user-3-line"></i></div>
-                <div class="cartAdd">
-                    <div class="navLine "><i class="ri-shopping-cart-line"></i></div>
-                </div>  
-            </div>
-        </nav>
-        <!-------------Horizontal Scrolls Bar for Mobile--------------->
-        <aside>
-            <p>Deals</p>
-            <p>Amazon Basics</p>
-            <p>Video</p>
-            <p>Buy Again</p>
-            <p>Best Seller</p>
-        </aside>
+      <!------------Navigation Bar------------->
+      <nav>
+        <div class="nav-right">
+          <div class="menuBar"><i class="ri-menu-line"></i></div>
+          <div class="navLogo border">
+            <img
+              src="../images/logo.png"
+              onclick="window.location.href='../index.html'"
+              alt="Amazon logo"
+            />
+          </div>
+        </div>
+        <div class="navLocation border">
+          <div class="locationIcon"><i class="ri-map-pin-line"></i></div>
+          <div class="location-link">
+            <div class="nav-line-1">Deliver to</div>
+            <div class="nav-line-2">Pakistan</div>
+          </div>
+        </div>
+
+        <div class="searchBar">
+          <div class="searchSelector">
+            <select name="url" id="searchDropDownBox">
+              <option value="">All</option>
+              <option value="kitchen">Kitchen</option>
+              <option value="bedding">Bedding</option>
+              <option value="fashion">Fashion</option>
+              <option value="travel">Travel</option>
+              <option value="tech">Tech</option>
+            </select>
+          </div>
+          <div class="search">
+            <input type="text" placeholder="Search Amazon" />
+          </div>
+          <div class="submit"><i class="ri-search-line"></i></div>
+        </div>
+
+        <div class="langSelector border">
+          <div class="flag"></div>
+          <div class="selectLang">
+            <select name="Language Selector" id="Language">
+              <option value="Eng">US</option>
+              <option value="Korean">한국</option>
+              <option value="Hindi">भारत</option>
+              <option value="Urdu">پاکستان</option>
+            </select>
+          </div>
+        </div>
+        <div
+          class="signin border"
+          onclick="window.location.href='../sign-in/register.html'"
+        >
+          <div class="nav-line-1">Hello, Sign in</div>
+          <div class="nav-line-2">
+            Account & List<i class="ri-arrow-down-s-line"></i>
+          </div>
+
+          <div class="signInHover">
+            <button>Sign in</button>
+          </div>
+        </div>
+
+        <div class="orders border">
+          <div class="nav-line-1">Returns</div>
+          <div class="nav-line-2">& Orders</div>
+        </div>
+
+        <div class="cart border">
+          <div class="nav-line-1 cartList">0</div>
+          <div class="nav-line-2">
+            <i class="ri-shopping-cart-line"></i>Cart
+          </div>
+        </div>
+        <div class="nav-left">
+          <div
+            class="signInUser"
+            onclick="window.location.href='../sign-in/register.html'"
+          >
+            Sign in<i class="ri-user-3-line"></i>
+          </div>
+          <div class="cartAdd">
+            <div class="navLine"><i class="ri-shopping-cart-line"></i></div>
+          </div>
+        </div>
+      </nav>
     </header>
     <main>
-        <div class="products">
-        </div>
-</main>
+      <section class="products">
+        <!-- Redered through JS -->
+      </section>
+    </main>
+    <script src="prodects.js"></script>
     <script src="product.js"></script>
-</body>
+  </body>
 </html>
