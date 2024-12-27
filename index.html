@@ -1,129 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" href="https://static.vecteezy.com/system/resources/previews/019/136/322/non_2x/amazon-logo-amazon-icon-free-free-vector.jpg" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
     <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-    rel="stylesheet"
+      rel="shortcut icon"
+      href="https://static.vecteezy.com/system/resources/previews/019/136/322/non_2x/amazon-logo-amazon-icon-free-free-vector.jpg"
+      type="image/x-icon"
     />
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="nav.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="nav.css" />
     <title>Amazon Clone</title>
-</head>
-<body>
-<header>
-    <!------------Navigation Bar------------->
-    <nav>
+  </head>
+  <body>
+    <header>
+      <!------------Navigation Bar------------->
+      <nav>
         <div class="nav-right">
-            <div class="menuBar"><i class="ri-menu-line"></i></div>
-            <div class="navLogo border"><img src="images/logo.png" alt="Amazon logo"></div>
+          <div class="menuBar menu-phone"><i class="ri-menu-line"></i></div>
+          <div class="navLogo border">
+            <img src="images/logo.png" alt="Amazon logo" />
+          </div>
         </div>
         <div class="navLocation border">
-            <div class="locationIcon"><i class="ri-map-pin-line"></i></div>
-                <div class="location-link">
-                <div class="nav-line-1">Deliver to</div>
-                <div class="nav-line-2">Pakistan</div>
-            </div>
+          <div class="locationIcon"><i class="ri-map-pin-line"></i></div>
+          <div class="location-link">
+            <div class="nav-line-1">Deliver to</div>
+            <div class="nav-line-2">Pakistan</div>
+          </div>
         </div>
 
-            <div class="searchBar">
-                <div class="searchSelector">
-                    <select name="url" id="searchDropDownBox">
-                        <option value="">All</option>
-                        <option value="kitchen">Kitchen</option>
-                        <option value="bedding">Bedding</option>
-                        <option value="fashion">Fashion</option>
-                        <option value="travel">Travel</option>
-                        <option value="tech">Tech </option>
-                    </select>
-                </div>
-                <div class="search"><input type="text" placeholder="Search Amazon"></div>
-                <div class="submit"><i class="ri-search-line"></i></div>
-            
-            </div>
+        <div class="searchBar">
+          <div class="searchSelector">
+            <select name="url" id="searchDropDownBox">
+              <option value="">All</option>
+              <option value="kitchen">Kitchen</option>
+              <option value="bedding">Bedding</option>
+              <option value="fashion">Fashion</option>
+              <option value="travel">Travel</option>
+              <option value="tech">Tech</option>
+            </select>
+          </div>
+          <div class="search">
+            <input type="text" placeholder="Search Amazon" />
+          </div>
+          <div class="submit"><i class="ri-search-line"></i></div>
+        </div>
 
         <div class="langSelector border">
-            <div class="flag"></div>
-            <div class="selectLang">
-                <select name="Language Selector" id="Language">
-                    <option value="Eng">US</option>
-                    <option value="Korean">한국</option>
-                    <option value="Hindi">भारत</option>
-                    <option value="Urdu">پاکستان</option>
-                </select>
-            </div>
+          <div class="flag"></div>
+          <div class="selectLang">
+            <select name="Language Selector" id="Language">
+              <option value="Eng">US</option>
+              <option value="Korean">한국</option>
+              <option value="Hindi">भारत</option>
+              <option value="Urdu">پاکستان</option>
+            </select>
+          </div>
         </div>
-        <div class="signin border" onclick="window.location.href='sign-in/register.html'">
-            <div class="nav-line-1">Hello, Sign in</div>
-            <div class="nav-line-2">Account & List<i class="ri-arrow-down-s-line"></i></div>
+        <div
+          class="signin border"
+          onclick="window.location.href='sign-in/register.html'"
+        >
+          <div class="nav-line-1">Hello, Sign in</div>
+          <div class="nav-line-2">
+            Account & List<i class="ri-arrow-down-s-line"></i>
+          </div>
 
-            <div class="signInHover">
-                <button>Sign in</button>
-                <br>
-                <p>New customer? <a href="sign-in/register.html">Start here</a></p>
-            </div>
+          <div class="signInHover">
+            <button>Sign in</button>
+            <br />
+            <p>New customer? <a href="sign-in/register.html">Start here</a></p>
+          </div>
         </div>
 
         <div class="orders border">
-            <div class="nav-line-1">Returns</div>
-            <div class="nav-line-2">& Orders</div>
+          <div class="nav-line-1">Returns</div>
+          <div class="nav-line-2">& Orders</div>
         </div>
 
         <div class="cart border">
-            <div class="nav-line-1 cartList">0</div>
-            <div class="nav-line-2 "><i class="ri-shopping-cart-line"></i>Cart</div>
+          <div class="nav-line-1 cartList">0</div>
+          <div class="nav-line-2">
+            <i class="ri-shopping-cart-line"></i>Cart
+          </div>
         </div>
         <div class="nav-left">
-            <div class="signInUser" onclick="window.location.href='sign-in/register.html'">Sign in<i class="ri-user-3-line"></i></div>
-            <div class="cartAdd">
-                <div class="navLine "><i class="ri-shopping-cart-line"></i></div>
-            </div>  
+          <div
+            class="signInUser"
+            onclick="window.location.href='sign-in/register.html'"
+          >
+            Sign in<i class="ri-user-3-line"></i>
+          </div>
+          <div class="cartAdd">
+            <div class="navLine"><i class="ri-shopping-cart-line"></i></div>
+          </div>
         </div>
-    </nav>
-    <!-------------Horizontal Scrolls Bar for Mobile--------------->
-    <aside>
+      </nav>
+      <!-------------Horizontal Scrolls Bar for Mobile--------------->
+      <aside>
         <p>Deals</p>
         <p>Amazon Basics</p>
         <p>Video</p>
         <p>Buy Again</p>
         <p>Best Seller</p>
-    </aside>
+      </aside>
 
-    <div class="pannel">
+      <div class="pannel">
         <left-pannel>
-            <p class="border"><i class="ri-menu-line">All</i></p>
-            <p class="border">Today's Deals</p>
-            <p class="border">Coustomer Service</p>
-            <p class="border">Registry</p>
-            <p class="border">Gift Cards</p>
-            <p class="border">Sell</p>
+          <p class="border menuBar"><i class="ri-menu-line"></i>All</p>
+          <p class="border">Today's Deals</p>
+          <p class="border">Coustomer Service</p>
+          <p class="border">Registry</p>
+          <p class="border">Gift Cards</p>
+          <p class="border">Sell</p>
         </left-pannel>
         <right-pannel>
-            <p class="border">Shop the gamming Store</p>
+          <p class="border">Shop the gamming Store</p>
         </right-pannel>
         <div class="locationdiv">
-            <i class="ri-map-pin-line">Deliver to Pakistan</i><i class="ri-arrow-down-s-line"></i>
+          <i class="ri-map-pin-line">Deliver to Pakistan</i
+          ><i class="ri-arrow-down-s-line"></i>
         </div>
-    </div>
-</header>
-<!--------------------Main div------------------------->
-<main id="main" class="forMobile">
-    <div class="arrows">
+      </div>
+      <div class="overlay">
+        <div class="side-menu">
+          <div class="top-menu">
+            <div
+              class="user"
+              onclick="window.location.href='sign-in/register.html'"
+            >
+              <i class="ri-user-3-line"></i>
+            </div>
+            Hello, Sign-in
+            <div class="cross" tabindex="0" aria-label="Close Menu">✖</div>
+          </div>
+          <div class="menu-content">
+            <h3>Shop by department</h3>
+            <option value="toys">Toys</option>
+            <option value="tech">Tech</option>
+            <option value="kitchen">Kitchen</option>
+            <option value="bedding">Bedding</option>
+            <option value="apparels">Apparels</option>
+            <option value="fashion">Fashion</option>
+            <option value="watches">Watches</option>
+            <option value="sports">Sports</option>
+            <option value="travel">Travel</option>
+            <option value="decore">Decore</option>
+            <option value="books">Books</option>
+            <option value="shoes">Shoes</option>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--------------------Main div------------------------->
+    <main id="main" class="forMobile">
+      <div class="arrows">
         <i class="ri-arrow-left-wide-line leftArrow"></i>
-        <i class="ri-arrow-right-wide-line rightArrow"></i>            
-    </div>
-    <div class="cet1"></div> <!-- Product div visible in both mobile and desktop -->
-    <div class="cet2"></div> <!-- Product div visible only on desktop -->
-    <div class="cet3"></div> <!-- Additional product div -->
-    <footer>
+        <i class="ri-arrow-right-wide-line rightArrow"></i>
+      </div>
+      <div class="cet1"></div>
+      <!-- Product div visible in both mobile and desktop -->
+      <div class="cet2"></div>
+      <!-- Product div visible only on desktop -->
+      <div class="cet3"></div>
+      <!-- Additional product div -->
+      <footer>
         <a href="#">Back to top</a>
-    </footer>
-</main>
-
-    
-<script src="index.js"></script>
-
-</body>
+      </footer>
+    </main>
+    <script src="main.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>

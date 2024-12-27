@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      rel="shortcut icon"
+      href="https://static.vecteezy.com/system/resources/previews/019/136/322/non_2x/amazon-logo-amazon-icon-free-free-vector.jpg"
+      type="image/x-icon"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> </title>
+    <title></title>
     <link rel="stylesheet" href="product-details.css" />
     <link rel="stylesheet" href="../nav.css" />
     <link
@@ -16,13 +21,9 @@
     <header>
       <nav>
         <div class="nav-right">
-          <div class="menuBar"><i class="ri-menu-line"></i></div>
+          <div class="menuBar menu-phone"><i class="ri-menu-line"></i></div>
           <div class="navLogo border">
-            <img
-              src="../images/logo.png"
-              onclick="window.location.href='../index.html'"
-              alt="Amazon logo"
-            />
+            <img src="../images/logo.png" alt="Amazon logo" />
           </div>
         </div>
         <div class="navLocation border">
@@ -69,11 +70,6 @@
           <div class="nav-line-2">
             Account & List<i class="ri-arrow-down-s-line"></i>
           </div>
-
-          <div class="signInHover">
-            <button>Sign in</button>
-            <p>New customer? <a href="sign-in/register.html">Start here</a></p>
-          </div>
         </div>
 
         <div class="orders border">
@@ -102,19 +98,8 @@
     </header>
 
     <main>
-      <div class="discrption">
-        <div class="img">
-          <img src="images/Apple Watch Series 9.jpg" alt="" />
-        </div>
-        <div class="details">
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea facilis
-            beatae assumenda pariatur temporibus nostrum, hic magni deserunt
-          </p>
-          <div class="sale">10K bought past month</div>
-          <hr />
-        </div>
-        
+      <section>
+        <div id="prime-product"></div>
         <div class="cart-btn">
           <div class="date">Delivery <b>Tuesday, November 5</b></div>
           <div class="loc">
@@ -133,8 +118,14 @@
             <button>Buy now</button>
           </div>
         </div>
-      </div>
+      </section>
+
+      <section>
+        <h2>You may also like...</h2>
+        <div class="others"></div>
+      </section>
     </main>
+    <script src="prodects.js"></script>
     <script src="product-details.js"></script>
   </body>
 </html>
