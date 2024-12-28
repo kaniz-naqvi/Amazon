@@ -72,3 +72,9 @@ searchInput.addEventListener("keydown", (event) => {
     removeStyle();
   }
 });
+let dropdown = document.getElementById("searchDropDownBox");
+
+dropdown.addEventListener("change", () => {
+  let selectedValue = dropdown.value; // Get the selected value
+  window.location.href = `products/product.html?category=${selectedValue}`; // Navigate to the new URL
+});

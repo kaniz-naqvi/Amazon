@@ -45,7 +45,7 @@ function updatePrimeProduct() {
         <div class="sale">${product.sales}</div>
         <hr />
         <br />
-        <div class="price"><strong>Price</strong> <b>${product.price}$</b></div>
+        <div class="price"><strong>Price</strong> $ <b>${product.price}</b></div>
       </div>
       <div class="cart-btn">
         <div class="date">Delivery <b>Tuesday, November 5</b></div>
@@ -84,7 +84,7 @@ function updatePrimeProduct() {
         <div class="other-img">
           <img src="images/${pro.name}.jpg" alt="" />
         </div>
-        <p class="price">Price: <b>${pro.price}</b></p>
+        <p class="price">Price: $ <b>${pro.price}</b></p>
       </div>
     `;
   });
@@ -112,5 +112,9 @@ function updatePrimeProduct() {
 }
 
 updatePrimeProduct();
-console.log(convertedPrice);
-console.log(productElement); // Log the selected product element to check if it's correct
+let dropdown = document.getElementById("searchDropDownBox");
+
+dropdown.addEventListener("change", () => {
+  let selectedValue = dropdown.value; // Get the selected value
+  window.location.href = `product.html?category=${selectedValue}`; // Navigate to the new URL
+});

@@ -22,7 +22,7 @@ function displayProduct(categories = []) {
         <p>
             <div class="produtDetails"><b>${product.name}</b>${product.details}</div>
             <div class="pastSales"><b>${product.sales} bought</b> in past month</div>
-            <div class="price"><b>${product.price}</b></div>
+            <div class="price">$ <b>${product.price}</b></div>
         </p>
         <button>Add to cart</button>
         </div>
@@ -38,7 +38,7 @@ function displayProduct(categories = []) {
         <p>
             <div class="produtDetails"><b>${product.name}</b>${product.details}</div>
             <div class="pastSales"><b>${product.sales} bought</b> in past month</div>
-            <div class="price"><b>${product.price}</b></div>
+            <div class="price">$ <b>${product.price}</b></div>
         </p>
         <button>Add to cart</button>
         </div>
