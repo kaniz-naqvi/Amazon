@@ -1,30 +1,3 @@
-// When Language gets changed, Country Flag also gets changed
-const languageSelector = document.getElementById("Language");
-languageSelector.addEventListener("change", changeFlag);
-
-function changeFlag() {
-  const selectedLanguage = languageSelector.value;
-  const flagDiv = document.querySelector(".flag");
-
-  switch (selectedLanguage) {
-    case "Eng":
-      flagDiv.style.backgroundImage = "url('Flags/American-Flag.webp')";
-      break;
-    case "Korean":
-      flagDiv.style.backgroundImage = "url('Flags/Korea.png')";
-      break;
-    case "Hindi":
-      flagDiv.style.backgroundImage = "url('Flags/India.png')";
-      break;
-    case "Urdu":
-      flagDiv.style.backgroundImage = "url('Flags/Pakistan.png')";
-      break;
-    default:
-      flagDiv.style.backgroundImage = "url('Flags/American-Flag.webp')";
-      break;
-  }
-}
-
 // Infinite loop of main background images
 const desktopImages = [
   "url(images/Beauty.jpg)",

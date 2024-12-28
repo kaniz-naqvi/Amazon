@@ -133,16 +133,20 @@ nav {
   justify-content: center;
 }
 
-.flag {
-  background-image: url("Flags/Amarican-Flag.webp");
+.flag img {
   background-position: center;
-  background-size: cover;
-  height: 16px;
-  width: 20px;
+  object-fit: contain;
+  width: 25px;
+  height: 30px;
+  padding-right: 2px;
 }
 #Language {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   outline: none;
   border: none;
+  width: 50px;
   background-color: transparent;
   font-family: Arial, Helvetica, sans-serif;
   color: #e6e6e6;
@@ -232,7 +236,7 @@ aside {
 .side-menu {
   margin-left: -25%;
   width: 25%;
-  background-color: #eeecec;
+  background-color: #fcfcfc;
   height: 100vh;
   transition: margin-left 1s ease;
 }

@@ -1,34 +1,3 @@
-var searchBar = document.querySelector(".searchBar");
-var submit = document.querySelector(".submit");
-var searchInput = searchBar.querySelector("input");
-
-searchBar.addEventListener("click", () => {
-  searchBar.style.border = "2px solid #f7b335";
-  document.querySelector("main").style.opacity = "0.5";
-});
-
-function removeStyle() {
-  searchBar.style.border = "none";
-  document.querySelector("main").style.opacity = "1";
-}
-
-submit.addEventListener("click", (event) => {
-  removeStyle();
-  event.stopPropagation();
-});
-
-document.addEventListener("click", (event) => {
-  if (!searchBar.contains(event.target)) {
-    removeStyle();
-  }
-});
-
-searchInput.addEventListener("keydown", (event) => {
-  if (event.key === "Enter") {
-    removeStyle();
-  }
-});
-
 function getCategoryFromURL() {
   const urlParams = new URLSearchParams(window.location.search);
   return urlParams.get("category");
@@ -53,7 +22,7 @@ function displayProduct(categories = []) {
         <p>
             <div class="produtDetails"><b>${product.name}</b>${product.details}</div>
             <div class="pastSales"><b>${product.sales} bought</b> in past month</div>
-            <div class="price"><sup>$</sup><b>${product.price}</b></div>
+            <div class="price"><b>${product.price}</b></div>
         </p>
         <button>Add to cart</button>
         </div>
@@ -69,7 +38,7 @@ function displayProduct(categories = []) {
         <p>
             <div class="produtDetails"><b>${product.name}</b>${product.details}</div>
             <div class="pastSales"><b>${product.sales} bought</b> in past month</div>
-            <div class="price"><sup>$</sup><b>${product.price}</b></div>
+            <div class="price"><b>${product.price}</b></div>
         </p>
         <button>Add to cart</button>
         </div>

@@ -12,7 +12,6 @@ body {
   flex-wrap: wrap;
 }
 .img {
-  margin-top: 3%;
   min-width: 20%;
   aspect-ratio: 1;
 }
@@ -61,18 +60,49 @@ body {
   padding-bottom: 20px;
 }
 button {
-  margin-top: 30px;
+  margin-top: 10px;
   padding: 10px;
   background-color: #fad42d;
   width: 100%;
   outline: none;
   border: none;
   border-radius: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   cursor: pointer;
 }
-.others {
+.others-section {
   padding: 0px 20px;
+}
+.others {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+  white-space: nowrap;
+  overflow-x: scroll;
+  scrollbar-width: 0px;
+}
+.other-cate {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 160px;
+  height: 210px;
+  padding: 4px;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1), -4px -4px 10px rgba(0, 0, 0, 0.1),
+    4px -4px 10px rgba(0, 0, 0, 0.1), -4px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.pro-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.others img {
+  width: 150px;
+  aspect-ratio: 1;
 }
 @media (max-width: 800px) {
   main {
@@ -87,6 +117,16 @@ button {
   .cart-btn,
   .discrption {
     width: 95%;
-    margin: 10px;
+  }
+  .details p {
+    font-size: 1.3em;
+  }
+  .others {
+    gap: 10px;
+    padding: 10px;
+  }
+  .other-cate {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(0, 0, 0, 0.1),
+      2px -2px 5px rgba(0, 0, 0, 0.1), -2px 2px 5px rgba(0, 0, 0, 0.1);
   }
 }

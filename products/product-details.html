@@ -17,8 +17,8 @@
     />
   </head>
   <body>
-    <!------------Navigation Bar------------->
     <header>
+      <!------------Navigation Bar------------->
       <nav>
         <div class="nav-right">
           <div class="menuBar menu-phone"><i class="ri-menu-line"></i></div>
@@ -52,14 +52,11 @@
         </div>
 
         <div class="langSelector border">
-          <div class="flag"></div>
+          <div class="flag">
+            <img src="https://flagsapi.com/US/flat/64.png" />
+          </div>
           <div class="selectLang">
-            <select name="Language Selector" id="Language">
-              <option value="Eng">US</option>
-              <option value="Korean">한국</option>
-              <option value="Hindi">भारत</option>
-              <option value="Urdu">پاکستان</option>
-            </select>
+            <select name="Language Selector" id="Language"></select>
           </div>
         </div>
         <div
@@ -95,37 +92,51 @@
           </div>
         </div>
       </nav>
+
+      <div class="overlay">
+        <div class="side-menu">
+          <div class="top-menu">
+            <div
+              class="user"
+              onclick="window.location.href='sign-in/register.html'"
+            >
+              <i class="ri-user-3-line"></i>
+            </div>
+            Hello, Sign-in
+            <div class="cross" tabindex="0" aria-label="Close Menu">×</div>
+          </div>
+          <div class="menu-content">
+            <h3>Shop by department</h3>
+            <option value="toys">Toys</option>
+            <option value="tech">Tech</option>
+            <option value="kitchen">Kitchen</option>
+            <option value="bedding">Bedding</option>
+            <option value="apparels">Apparels</option>
+            <option value="fashion">Fashion</option>
+            <option value="watches">Watches</option>
+            <option value="sports">Sports</option>
+            <option value="travel">Travel</option>
+            <option value="decore">Decore</option>
+            <option value="books">Books</option>
+            <option value="shoes">Shoes</option>
+          </div>
+        </div>
+      </div>
     </header>
 
     <main>
       <section>
         <div id="prime-product"></div>
-        <div class="cart-btn">
-          <div class="date">Delivery <b>Tuesday, November 5</b></div>
-          <div class="loc">
-            <i class="ri-map-pin-line"></i> Deliver to Pakistan
-          </div>
-          <div class="stock">In Stock</div>
-          <div class="quantity">
-            <select name="quantity">
-              <option value="" disabled selected>Quantity:1</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-            </select>
-          </div>
-          <div class="btn">
-            <button>Add to Cart</button>
-            <button>Buy now</button>
-          </div>
-        </div>
       </section>
 
-      <section>
+      <section class="others-section">
         <h2>You may also like...</h2>
         <div class="others"></div>
       </section>
     </main>
+    <script src="../flagsCurrency.js"></script>
     <script src="prodects.js"></script>
     <script src="product-details.js"></script>
+    <script src="../index.js"></script>
   </body>
 </html>
