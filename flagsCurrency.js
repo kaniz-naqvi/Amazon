@@ -23,18 +23,8 @@ const countries = [
   }, // Brazil
   { name: "Canada", shortName: "CA", currencySymbol: "$", currencyName: "CAD" }, // Canada
   { name: "مصر", shortName: "EG", currencySymbol: "ج.م", currencyName: "EGP" }, // Egypt
-  {
-    name: "ประเทศ",
-    shortName: "TH",
-    currencySymbol: "฿",
-    currencyName: "THB",
-  }, // Thailand
-  {
-    name: "سعودية",
-    shortName: "SA",
-    currencySymbol: "﷼",
-    currencyName: "SAR",
-  }, // Saudi Arabia
+  { name: "ประเทศ", shortName: "TH", currencySymbol: "฿", currencyName: "THB" }, // Thailand
+  { name: "سعودية", shortName: "SA", currencySymbol: "﷼", currencyName: "SAR" }, // Saudi Arabia
 ];
 
 // Fetch Exchange Rates
@@ -56,7 +46,7 @@ function populateLanguageSelector(exchangeRates) {
 
     // Set default selection for USD
     if (country.currencyName === "USD") {
-      option.selected = true; // Set USD as default selected
+      option.selected = true;
     }
 
     selectElement.appendChild(option);
@@ -103,22 +93,41 @@ function changeCurrency(countryDetails, exchangeRates) {
     return;
   }
 
-  // Directly update the currency symbol and product prices
-  countries.forEach((country) => {
-    if (country.currencyName === countryDetails.currencyName) {
-      // Directly modify the object properties
-      country.currencySymbol = countryDetails.currencySymbol;
-    }
-  });
+  // Update prices on the page
+  updatePrices(countryDetails.currencyName, conversionRate);
 
-  // Update product prices
-  products.forEach((product) => {
-    const productElement = document.querySelector(
-      `.products[data-name="${product.name}"] .price b`
+  // Save changes to localStorage
+  localStorage.setItem("selectedCurrency", countryDetails.currencyName);
+  localStorage.setItem("exchangeRate", conversionRate);
+}
+
+// Reflect new prices and symbols on the page
+function updatePrices(currency, exchangeRate) {
+  const priceElements = document.querySelectorAll(".price");
+  const currencySymbol = countries.find(
+    (country) => country.currencyName === currency
+  )?.currencySymbol;
+
+  priceElements.forEach((priceElement) => {
+    const originalPrice = parseFloat(
+      priceElement.getAttribute("data-original-price")
     );
-    if (productElement) {
-      const convertedPrice = (product.price * conversionRate).toFixed(2);
-      productElement.textContent = `${countryDetails.currencySymbol}${convertedPrice}`;
-    }
+    const convertedPrice = (originalPrice * exchangeRate).toFixed(2);
+    priceElement.textContent = `${currencySymbol}${convertedPrice}`;
   });
 }
+
+// On page load, apply saved currency and exchange rate from localStorage
+window.addEventListener("DOMContentLoaded", () => {
+  const selectedCurrency = localStorage.getItem("selectedCurrency") || "USD"; // Default to USD
+  const exchangeRate = localStorage.getItem("exchangeRate") || 1; // Default rate
+
+  const countryDetails = countries.find(
+    (country) => country.currencyName === selectedCurrency
+  );
+
+  if (countryDetails) {
+    changingFlags(countryDetails.shortName);
+    updatePrices(selectedCurrency, exchangeRate);
+  }
+});
