@@ -38,7 +38,7 @@ const selectElement = document.getElementById("Language");
 function populateLanguageSelector() {
   const savedCountryData = JSON.parse(
     localStorage.getItem("selectedCountryData")
-  ) || { currencyName: "USD", flagUrl: "" }; // Default to USD if not found
+  ) || { currencyName: "USD", flagUrl: "https://flagsapi.com/US/flat/64.png" }; // Default to USD if not found
 
   // Add country options to the dropdown
   countries.forEach((country) => {
