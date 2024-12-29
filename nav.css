@@ -273,7 +273,7 @@ aside {
   margin: 10px 5px 0px 0px;
   padding: 10px;
 }
-.menu-content option {
+.menu-content p {
   color: #37475a;
   height: 38px;
   letter-spacing: 1.5px;
@@ -282,14 +282,14 @@ aside {
   padding-left: 10px;
   padding-top: 10px;
 }
-.menu-content option::after {
+.menu-content p::after {
   content: "►";
   position: absolute;
   left: 90%;
   font-size: 20px;
   font-weight: 100;
 }
-.menu-content option:hover {
+.menu-content p:hover {
   color: #000;
   background-color: #0707072d;
 }
