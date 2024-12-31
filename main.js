@@ -295,8 +295,43 @@ dropdown.addEventListener("change", () => {
   let selectedValue = dropdown.value; // Get the selected value
   window.location.href = `products/product.html?category=${selectedValue}`; // Navigate to the new URL
 });
-let searchInputI = document.getElementById("search-input");
-searchInputI.addEventListener("input", (e) => {
-  let value = e.target.value;
-  window.location.href = `products/product.html?query=${value}`; // Navigate to the new URL
+const searchBox = document.getElementById("search-input");
+searchBox.addEventListener("input", (e) => {
+  updateSearchValue(e.target.value);
 });
+function updateSearchValue(query) {
+  searchBox.value = query;
+
+  // Redirect with query in URL
+  window.location.href = `products/product.html?search=${encodeURIComponent(
+    query
+  )}`;
+}
+let sideMenuOptions = document.querySelectorAll(".menu-content p");
+sideMenuOptions.forEach((element) => {
+  element.addEventListener("click", () => {
+    let selectedValue = element.textContent.toLowerCase(); // or you could use data attributes to control values
+    window.location.href = `products/product.html?category=${selectedValue}`;
+  });
+});
+let username = document.querySelectorAll(".username");
+let isSignIn = false;
+window.onload = () => {
+  // Retrieve username, email, and password from localStorage
+  let storedUsername = localStorage.getItem("username");
+  let storedEmail = localStorage.getItem("email");
+
+  // Check if the values exist in localStorage
+  if (storedUsername && storedEmail) {
+    isSignIn = true;
+  }
+  if (isSignIn) {
+    username.forEach((name) => {
+      name.innerHTML = storedUsername;
+      let signInBox = document.querySelector(".signInHover");
+      if (signInBox) {
+        signInBox.style.display = "none";
+      }
+    });
+  }
+};

@@ -2,17 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="shortcut icon" href="https://static.vecteezy.com/system/resources/previews/019/136/322/non_2x/amazon-logo-amazon-icon-free-free-vector.jpg" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="https://static.vecteezy.com/system/resources/previews/019/136/322/non_2x/amazon-logo-amazon-icon-free-free-vector.jpg"
+      type="image/x-icon"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="sing-in.css" />
-    <title>Singn in</title>
+    <title>Sign In</title>
   </head>
   <body>
     <div class="logo">
-      <img src="../images/logo-black.webp" width="100px" height="80px" alt="" />
+      <img
+        src="../images/logo-black.webp"
+        width="100px"
+        height="80px"
+        alt="Amazon Logo"
+      />
     </div>
 
-    <form action="" id="Sign-upForm">
+    <!-- Sign-Up Form -->
+    <form action="" id="Sign-upForm" style="display: block">
       <h1>Create Account</h1>
       <br />
       <label for="username">
@@ -25,30 +35,63 @@
           required
         />
       </label>
-      <label for="number">
-        Mobile Number or Email
-        <input type="text" name="email/mobile" required />
-      </label>
-      <label for="pasword">
-        Pasword
+      <label for="email">
+        Email
         <input
-          type="text"
-          name="pasword"
-          placeholder="At least 6 charachters"
+          type="email"
+          name="email"
+          id="email"
+          required
+          placeholder="Enter your email"
         />
-        Re-enter password
-        <input type="text" name="pasword" />
       </label>
-      <p>Already have an Account? <a id="Signin" href="#">sign in</a></p>
+      <label for="password">
+        Password
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="At least 6 characters"
+          required
+        />
+      </label>
+      <label for="confirm-password">
+        Re-enter Password
+        <input
+          type="password"
+          name="confirm-password"
+          id="confirm-password"
+          required
+          placeholder="Confirm your password"
+        />
+      </label>
+      <p>Already have an Account? <a id="Signin" href="#">Sign in</a></p>
       <button type="submit" class="btn">Continue</button>
     </form>
 
-    <form action="" id="sign-inForm">
+    <!-- Sign-In Form -->
+    <form action="" id="sign-inForm" style="display: none">
       <h1>Sign in</h1>
       <br />
-      <label for="number">
+      <label for="email-signin">
         Mobile Number or Email
-        <input type="text" name="email/mobile" required />
+        <input
+          type="text"
+          name="email-mobile"
+          id="email-signin"
+          required
+          placeholder="Enter email or mobile number"
+        />
+      </label>
+      <label for="password-signin">
+        Password
+        <input
+          type="password"
+          name="password"
+          id="password-signin"
+          placeholder="At least 6 characters"
+          required
+        />
       </label>
       <button type="submit" class="btn">Continue</button>
       <fieldset>

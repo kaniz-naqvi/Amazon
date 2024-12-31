@@ -11,12 +11,27 @@ function updateTitle(productName) {
     document.title = `Amazon.com: ${product.name}`;
   }
 }
+let username = document.querySelectorAll(".username");
+let isSignIn = false;
 
 // Run on page load
 window.onload = function () {
   const productName = getProductNameFromURL();
   if (productName) {
     updateTitle(productName);
+  }
+
+  let storedUsername = localStorage.getItem("username");
+  let storedEmail = localStorage.getItem("email");
+
+  // Check if the values exist in localStorage
+  if (storedUsername && storedEmail) {
+    isSignIn = true;
+  }
+  if (isSignIn) {
+    username.forEach((name) => {
+      name.innerHTML = storedUsername;
+    });
   }
 };
 
@@ -118,3 +133,20 @@ dropdown.addEventListener("change", () => {
   let selectedValue = dropdown.value; // Get the selected value
   window.location.href = `product.html?category=${selectedValue}`; // Navigate to the new URL
 });
+let sideMenuOptions = document.querySelectorAll(".menu-content p");
+sideMenuOptions.forEach((element) => {
+  element.addEventListener("click", () => {
+    let selectedValue = element.textContent.toLowerCase(); // or you could use data attributes to control values
+    window.location.href = `./product.html?category=${selectedValue}`;
+  });
+});
+const searchBox = document.getElementById("search-input");
+searchBox.addEventListener("input", (e) => {
+  updateSearchValue(e.target.value);
+});
+function updateSearchValue(query) {
+  searchBox.value = query;
+
+  // Redirect with query in URL
+  window.location.href = `./product.html?search=${encodeURIComponent(query)}`;
+}

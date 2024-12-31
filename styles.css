@@ -91,7 +91,6 @@ main {
 /*Styles of categories/products*/
 .cet3 {
   height: auto;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,19 +132,6 @@ main {
 }
 .img-div span {
   font-size: small;
-}
-footer {
-  height: 100vh;
-  width: 100%;
-  color: #fff;
-  background-color: #232f3e;
-}
-footer a {
-  text-decoration: none;
-  color: #dddd;
-  background-color: #222f3d;
-  width: 100%;
-  height: 7px;
 }
 /*Responsiveness*/
 @media (max-width: 800px) {

@@ -46,7 +46,7 @@
             </select>
           </div>
           <div class="search">
-            <input type="text" placeholder="Search Amazon" />
+            <input type="text" id="search-input" placeholder="Search Amazon" />
           </div>
           <div class="submit"><i class="ri-search-line"></i></div>
         </div>
@@ -63,7 +63,9 @@
           class="signin border"
           onclick="window.location.href='../sign-in/register.html'"
         >
-          <div class="nav-line-1">Hello, Sign in</div>
+          <div class="nav-line-1">
+            Hello, <span class="username">Sign-in</span>
+          </div>
           <div class="nav-line-2">
             Account & List<i class="ri-arrow-down-s-line"></i>
           </div>
@@ -85,7 +87,7 @@
             class="signInUser"
             onclick="window.location.href='../sign-in/register.html'"
           >
-            Sign in<i class="ri-user-3-line"></i>
+            <span class="username">Sign-in</span><i class="ri-user-3-line"></i>
           </div>
           <div class="cartAdd">
             <div class="navLine"><i class="ri-shopping-cart-line"></i></div>
@@ -102,23 +104,23 @@
             >
               <i class="ri-user-3-line"></i>
             </div>
-            Hello, Sign-in
+            Hello, <span class="username">Sign-in</span>
             <div class="cross" tabindex="0" aria-label="Close Menu">×</div>
           </div>
           <div class="menu-content">
             <h3>Shop by department</h3>
-            <option value="toys">Toys</option>
-            <option value="tech">Tech</option>
-            <option value="kitchen">Kitchen</option>
-            <option value="bedding">Bedding</option>
-            <option value="apparels">Apparels</option>
-            <option value="fashion">Fashion</option>
-            <option value="watches">Watches</option>
-            <option value="sports">Sports</option>
-            <option value="travel">Travel</option>
-            <option value="decore">Decore</option>
-            <option value="books">Books</option>
-            <option value="shoes">Shoes</option>
+            <p data-category="toys">Toys</p>
+            <p data-category="tech">Tech</p>
+            <p data-category="kitchen">Kitchen</p>
+            <p data-category="bedding">Bedding</p>
+            <p data-category="apparels">Apparels</p>
+            <p data-category="fashion">Fashion</p>
+            <p data-category="watches">Watches</p>
+            <p data-category="sports">Sports</p>
+            <p data-category="travel">Travel</p>
+            <p data-category="decore">Decore</p>
+            <p data-category="books">Books</p>
+            <p data-category="shoes">Shoes</p>
           </div>
         </div>
       </div>
@@ -134,6 +136,55 @@
         <div class="others"></div>
       </section>
     </main>
+
+    <!-- Footer Section -->
+    <footer style="position: relative; background-color: #37475a; color: white">
+      <!-- First Section: Back to Top -->
+      <div style="text-align: center; padding: 10px 0">
+        <a
+          href="#top"
+          style="color: white; text-decoration: none; font-size: 16px"
+        >
+          <span>Back to top</span>
+          <span style="font-size: 20px; margin-left: 5px">↑</span>
+        </a>
+      </div>
+
+      <!-- Second Section: Social Links and Info -->
+      <div style="background-color: #232f3e; padding: 20px 0">
+        <div style="text-align: center; color: white; font-size: 16px">
+          <p>&copy; 2024 Amazon Clone made by Mehak Fatima Naqvi</p>
+          <div>
+            <!-- Social Media Icons -->
+            <a
+              href="https://github.com/kaniz-naqvi"
+              target="_blank"
+              class="social-icon"
+            >
+              <i class="ri-github-fill"></i>
+              <!-- Replace with appropriate icon class -->
+            </a>
+            <a
+              href="https://www.instagram.com/mehak_fatima_naqvi_/"
+              target="_blank"
+              class="social-icon"
+            >
+              <i class="ri-instagram-fill"></i>
+              <!-- Replace with appropriate icon class -->
+            </a>
+            <a
+              href="https://www.linkedin.com/in/mehak-fatima-naqvi/"
+              target="_blank"
+              class="social-icon"
+            >
+              <i class="ri-linkedin-fill"></i>
+              <!-- Replace with appropriate icon class -->
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script src="../flagsCurrency.js"></script>
     <script src="prodects.js"></script>
     <script src="product-details.js"></script>

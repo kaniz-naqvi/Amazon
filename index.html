@@ -63,7 +63,9 @@
           class="signin border"
           onclick="window.location.href='sign-in/register.html'"
         >
-          <div class="nav-line-1">Hello, Sign in</div>
+          <div class="nav-line-1">
+            Hello, <span class="username">Sign-in</span>
+          </div>
           <div class="nav-line-2">
             Account & List<i class="ri-arrow-down-s-line"></i>
           </div>
@@ -91,7 +93,7 @@
             class="signInUser"
             onclick="window.location.href='sign-in/register.html'"
           >
-            Sign in<i class="ri-user-3-line"></i>
+            <span class="username">Sign-in</span><i class="ri-user-3-line"></i>
           </div>
           <div class="cartAdd">
             <div class="navLine"><i class="ri-shopping-cart-line"></i></div>
@@ -126,7 +128,7 @@
         </right-pannel>
         <div class="locationdiv">
           <i class="ri-map-pin-line"
-            >Deliver to <span class="location-country">Pakistan</span></i
+            >Deliver to <span class="location-country"></span></i
           ><i class="ri-arrow-down-s-line"></i>
         </div>
       </div>
@@ -139,7 +141,7 @@
             >
               <i class="ri-user-3-line"></i>
             </div>
-            Hello, Sign-in
+            Hello,<span class="username">Sign-in</span>
             <div class="cross" tabindex="0" aria-label="Close Menu">×</div>
           </div>
           <div class="menu-content">
@@ -168,13 +170,60 @@
       </div>
       <div class="cet1"></div>
       <!-- Product div visible in both mobile and desktop -->
-      <div class="cet2"></div>
-      <!-- Product div visible only on desktop -->
       <div class="cet3"></div>
       <!-- Additional product div -->
-      <footer>
-        <a href="#">Back to top</a>
+
+      <!-- Footer Section -->
+      <footer
+        style="position: relative; background-color: #37475a; color: white"
+      >
+        <!-- First Section: Back to Top -->
+        <div style="text-align: center; padding: 10px 0">
+          <a
+            href="#top"
+            style="color: white; text-decoration: none; font-size: 16px"
+          >
+            <span>Back to top</span>
+            <span style="font-size: 20px; margin-left: 5px">↑</span>
+          </a>
+        </div>
+
+        <!-- Second Section: Social Links and Info -->
+        <div style="background-color: #232f3e; padding: 20px 0">
+          <div style="text-align: center; color: white; font-size: 16px">
+            <p>&copy; 2024 Amazon Clone made by Mehak Fatima Naqvi</p>
+            <div>
+              <!-- Social Media Icons -->
+              <a
+                href="https://github.com/kaniz-naqvi"
+                target="_blank"
+                class="social-icon"
+              >
+                <i class="ri-github-fill"></i>
+                <!-- Replace with appropriate icon class -->
+              </a>
+              <a
+                href="https://www.instagram.com/mehak_fatima_naqvi_/"
+                target="_blank"
+                class="social-icon"
+              >
+                <i class="ri-instagram-fill"></i>
+                <!-- Replace with appropriate icon class -->
+              </a>
+              <a
+                href="https://www.linkedin.com/in/mehak-fatima-naqvi/"
+                target="_blank"
+                class="social-icon"
+              >
+                <i class="ri-linkedin-fill"></i>
+                <!-- Replace with appropriate icon class -->
+              </a>
+            </div>
+          </div>
+        </div>
       </footer>
+
+      <!-- CSS -->
     </main>
     <script src="main.js"></script>
     <script src="index.js"></script>

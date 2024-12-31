@@ -231,7 +231,7 @@ aside {
   z-index: 88;
 }
 .no-scroll {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 .side-menu {
   margin-left: -25%;
@@ -293,6 +293,38 @@ aside {
   color: #000;
   background-color: #0707072d;
 }
+/*footer*/
+.social-icon {
+  color: white;
+  font-size: 30px;
+  margin: 0 15px;
+  text-decoration: none;
+  position: relative;
+}
+
+.social-icon::before,
+.social-icon::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.5s ease;
+}
+
+.social-icon::before {
+  left: 0;
+  bottom: 0;
+}
+
+.social-icon:hover::before {
+  width: 100%;
+}
+
+footer {
+  margin-top: auto;
+}
+
 /* For Mobile */
 @media (max-width: 800px) {
   /*Nav Styling for Mobile*/

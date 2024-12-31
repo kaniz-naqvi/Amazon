@@ -72,11 +72,3 @@ searchInput.addEventListener("keydown", (event) => {
     removeStyle();
   }
 });
-
-let sideMenuOptions = document.querySelectorAll(".menu-content p");
-sideMenuOptions.forEach((element) => {
-  element.addEventListener("click", () => {
-    let selectedValue = element.textContent.toLowerCase(); // or you could use data attributes to control values
-    window.location.href = `products/product.html?category=${selectedValue}`;
-  });
-});
