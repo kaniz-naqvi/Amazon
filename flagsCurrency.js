@@ -33,12 +33,17 @@ const countries = [
 ];
 
 const selectElement = document.getElementById("Language");
+const locationElements = document.querySelectorAll(".location-country");
 
 // Populate the language selector
 function populateLanguageSelector() {
   const savedCountryData = JSON.parse(
     localStorage.getItem("selectedCountryData")
-  ) || { currencyName: "USD", flagUrl: "https://flagsapi.com/US/flat/64.png" }; // Default to USD if not found
+  ) || {
+    currencyName: "USD",
+    flagUrl: "https://flagsapi.com/US/flat/64.png",
+    name: "US",
+  };
 
   // Add country options to the dropdown
   countries.forEach((country) => {
@@ -55,6 +60,7 @@ function populateLanguageSelector() {
   if (defaultCountry) {
     selectElement.value = defaultCountry.currencyName; // Set the saved country in the dropdown
     changingFlags(savedCountryData.flagUrl); // Update the flag using saved URL
+    updateLocations(savedCountryData.name); // Update locations
   }
 }
 
@@ -63,6 +69,13 @@ let flag = document.querySelector(".flag img");
 
 function changingFlags(flagUrl) {
   flag.setAttribute("src", flagUrl);
+}
+
+// Update location elements with the country name
+function updateLocations(countryName) {
+  locationElements.forEach((element) => {
+    element.textContent = countryName;
+  });
 }
 
 // Save selected country and flag URL to localStorage
@@ -77,6 +90,7 @@ selectElement.addEventListener("change", (event) => {
     const selectedCountryData = {
       currencyName: selectedCountry,
       flagUrl: flagUrl,
+      name: country.name,
     };
 
     // Save country and flag to localStorage
@@ -85,6 +99,7 @@ selectElement.addEventListener("change", (event) => {
       JSON.stringify(selectedCountryData)
     );
     changingFlags(flagUrl); // Change flag based on selected country
+    updateLocations(country.name); // Update location names
   }
 });
 

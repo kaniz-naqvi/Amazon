@@ -295,3 +295,8 @@ dropdown.addEventListener("change", () => {
   let selectedValue = dropdown.value; // Get the selected value
   window.location.href = `products/product.html?category=${selectedValue}`; // Navigate to the new URL
 });
+let searchInputI = document.getElementById("search-input");
+searchInputI.addEventListener("input", (e) => {
+  let value = e.target.value;
+  window.location.href = `products/product.html?query=${value}`; // Navigate to the new URL
+});

@@ -356,7 +356,7 @@ aside {
     background-color: #37475a;
   }
   .locationdiv {
-    display: block;
+    display: flex;
   }
   .forMobile {
     background-image: url("images/mobile-game.jpg");

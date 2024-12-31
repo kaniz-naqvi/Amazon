@@ -30,7 +30,7 @@
           <div class="locationIcon"><i class="ri-map-pin-line"></i></div>
           <div class="location-link">
             <div class="nav-line-1">Deliver to</div>
-            <div class="nav-line-2">Pakistan</div>
+            <div class="nav-line-2"><div class="location-country"></div></div>
           </div>
         </div>
 
@@ -46,7 +46,7 @@
             </select>
           </div>
           <div class="search">
-            <input type="text" placeholder="Search Amazon" />
+            <input id="search-input" type="text" placeholder="Search Amazon" />
           </div>
           <div class="submit"><i class="ri-search-line"></i></div>
         </div>
@@ -117,10 +117,16 @@
           <p class="border">Sell</p>
         </left-pannel>
         <right-pannel>
-          <p class="border">Shop the gamming Store</p>
+          <p
+            class="border"
+            onclick="window.location.href='products/product.html?category=tech'"
+          >
+            Shop the gamming Store
+          </p>
         </right-pannel>
         <div class="locationdiv">
-          <i class="ri-map-pin-line">Deliver to Pakistan</i
+          <i class="ri-map-pin-line"
+            >Deliver to <span class="location-country">Pakistan</span></i
           ><i class="ri-arrow-down-s-line"></i>
         </div>
       </div>

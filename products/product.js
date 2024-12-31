@@ -3,18 +3,27 @@ function getCategoryFromURL() {
   return urlParams.get("category");
 }
 
+let searchValue = document.getElementById("search-input");
 let mainProducts = document.querySelector("main");
 
-function displayProduct(categories = []) {
-  let productHTML = ``;
+// Update product display on search input
+searchValue.addEventListener("input", (e) => {
+  const query = e.target.value.toLowerCase();
+  searchProductsByName(query);
+});
 
-  if (categories.length > 0) {
-    const filteredProducts = products.filter((product) =>
-      categories.includes(product.category.toLowerCase())
-    );
+function searchProductsByName(query) {
+  let productHTML = "";
 
+  // Filter products based on the search query
+  const filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(query)
+  );
+
+  if (filteredProducts.length > 0) {
     filteredProducts.forEach((product) => {
-      productHTML += `<div class="products ${product.styleClass}" data-name="${product.name}">
+      productHTML += `
+      <div class="products ${product.styleClass}" data-name="${product.name}">
         <div class="productImg">
             <img src="images/${product.name}.jpg" alt="${product.name}">
         </div>
@@ -26,36 +35,57 @@ function displayProduct(categories = []) {
         </p>
         <button>Add to cart</button>
         </div>
-    </div>`;
+      </div>`;
     });
   } else {
-    products.forEach((product) => {
-      productHTML += `<div class="products ${product.styleClass}" data-name="${product.name}">
-        <div class="productImg">
-            <img src="images/${product.name}.jpg" alt="${product.name}">
-        </div>
-        <div class="details">
-        <p>
-            <div class="produtDetails"><b>${product.name}</b>${product.details}</div>
-            <div class="pastSales"><b>${product.sales} bought</b> in past month</div>
-            <div class="price">$ <b>${product.price}</b></div>
-        </p>
-        <button>Add to cart</button>
-        </div>
-    </div>`;
-    });
+    productHTML = `<p>No products found matching your search!</p>`;
   }
 
   mainProducts.innerHTML = productHTML;
 
+  attachProductClickListeners();
+}
+
+function displayProduct(categories = []) {
+  let productHTML = "";
+
+  const filteredProducts = categories.length
+    ? products.filter((product) =>
+        categories.includes(product.category.toLowerCase())
+      )
+    : products;
+
+  filteredProducts.forEach((product) => {
+    productHTML += `
+    <div class="products ${product.styleClass}" data-name="${product.name}">
+      <div class="productImg">
+          <img src="images/${product.name}.jpg" alt="${product.name}">
+      </div>
+      <div class="details">
+      <p>
+          <div class="produtDetails"><b>${product.name}</b>${product.details}</div>
+          <div class="pastSales"><b>${product.sales} bought</b> in past month</div>
+          <div class="price">$ <b>${product.price}</b></div>
+      </p>
+      <button>Add to cart</button>
+      </div>
+    </div>`;
+  });
+
+  mainProducts.innerHTML = productHTML;
+
+  attachProductClickListeners();
+}
+
+function attachProductClickListeners() {
   let productElements = document.querySelectorAll(".products");
 
   productElements.forEach((pro) => {
     pro.addEventListener("click", () => {
       const productName = pro.dataset.name;
-      const category = getCategoryFromURL(); // Get the current category from the URL
+      const category = getCategoryFromURL();
 
-      // Redirect to the product-details page with the product name and category
+      // Redirect to the product-details page with product name and category
       window.location.href = `product-details.html?name=${encodeURIComponent(
         productName
       )}`;
@@ -77,6 +107,6 @@ window.onload = initProductDisplay;
 let dropdown = document.getElementById("searchDropDownBox");
 
 dropdown.addEventListener("change", () => {
-  let selectedValue = dropdown.value;
+  let selectedValue = dropdown.value.toLowerCase();
   displayProduct([selectedValue]);
 });
