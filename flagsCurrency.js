@@ -1,3 +1,4 @@
+// Array of countries with relevant information such as name, shortName, currency symbol, and currency name
 const countries = [
   { name: "US", shortName: "US", currencySymbol: "$", currencyName: "USD" },
   { name: "한국", shortName: "KR", currencySymbol: "₩", currencyName: "KRW" },
@@ -32,11 +33,13 @@ const countries = [
   { name: "سعودية", shortName: "SA", currencySymbol: "﷼", currencyName: "SAR" },
 ];
 
+// Select the language dropdown and elements for displaying country locations
 const selectElement = document.getElementById("Language");
 const locationElements = document.querySelectorAll(".location-country");
 
-// Populate the language selector
+// Function to populate the language selector dropdown
 function populateLanguageSelector() {
+  // Load previously selected country data from localStorage or use default values
   const savedCountryData = JSON.parse(
     localStorage.getItem("selectedCountryData")
   ) || {
@@ -45,63 +48,62 @@ function populateLanguageSelector() {
     name: "US",
   };
 
-  // Add country options to the dropdown
+  // Add all countries as options in the dropdown
   countries.forEach((country) => {
     const option = document.createElement("option");
-    option.value = country.currencyName;
-    option.textContent = country.name;
+    option.value = country.currencyName; // Set the value to currency name
+    option.textContent = country.name; // Display country name
     selectElement.appendChild(option);
   });
 
-  // Set the selected country in the dropdown based on saved value
+  // Set the default or previously saved country in the dropdown
   const defaultCountry = countries.find(
     (country) => country.currencyName === savedCountryData.currencyName
   );
   if (defaultCountry) {
-    selectElement.value = defaultCountry.currencyName; // Set the saved country in the dropdown
-    changingFlags(savedCountryData.flagUrl); // Update the flag using saved URL
-    updateLocations(savedCountryData.name); // Update locations
+    selectElement.value = defaultCountry.currencyName; // Set selected value
+    changingFlags(savedCountryData.flagUrl); // Update the flag display
+    updateLocations(savedCountryData.name); // Update location display
   }
 }
 
-// Update the flag based on the flag URL
+// Function to update the flag based on the selected country
 let flag = document.querySelector(".flag img");
-
 function changingFlags(flagUrl) {
-  flag.setAttribute("src", flagUrl);
+  flag.setAttribute("src", flagUrl); // Set the image source to the provided URL
 }
 
-// Update location elements with the country name
+// Function to update displayed location elements with the selected country name
 function updateLocations(countryName) {
   locationElements.forEach((element) => {
-    element.textContent = countryName;
+    element.textContent = countryName; // Update text content of each element
   });
 }
 
-// Save selected country and flag URL to localStorage
+// Event listener for dropdown change to update flag and locations
 selectElement.addEventListener("change", (event) => {
-  const selectedCountry = event.target.value;
+  const selectedCountry = event.target.value; // Get selected currency name
   const country = countries.find(
     (country) => country.currencyName === selectedCountry
   );
 
   if (country) {
-    const flagUrl = `https://flagsapi.com/${country.shortName}/flat/64.png`;
+    const flagUrl = `https://flagsapi.com/${country.shortName}/flat/64.png`; // Construct flag URL
     const selectedCountryData = {
       currencyName: selectedCountry,
       flagUrl: flagUrl,
       name: country.name,
     };
 
-    // Save country and flag to localStorage
+    // Save selected country data to localStorage
     localStorage.setItem(
       "selectedCountryData",
       JSON.stringify(selectedCountryData)
     );
-    changingFlags(flagUrl); // Change flag based on selected country
-    updateLocations(country.name); // Update location names
+    changingFlags(flagUrl); // Update the flag display
+    updateLocations(country.name); // Update location display
   }
 });
 
-// Populate the selector on page load
+// Call the function to populate the selector when the page loads
 populateLanguageSelector();
