@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="shortcut icon"
+      href="https://static.vecteezy.com/system/resources/previews/019/136/322/non_2x/amazon-logo-amazon-icon-free-free-vector.jpg"
+      type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="nav.css" />
+    <title>Amazon Clone</title>
+  </head>
+  <body>
+    <header>
+      <!------------Navigation Bar------------->
+      <nav>
+        <div class="nav-right">
+          <div class="menuBar menu-phone"><i class="ri-menu-line"></i></div>
+          <div class="navLogo border">
+            <img src="images/logo.png" alt="Amazon logo" />
+          </div>
+        </div>
+        <!-- Location div -->
+        <div class="navLocation border">
+          <div class="locationIcon"><i class="ri-map-pin-line"></i></div>
+          <div class="location-link">
+            <div class="nav-line-1">Deliver to</div>
+            <div class="nav-line-2"><div class="location-country"></div></div>
+          </div>
+        </div>
+        <!-- searchBar -->
+        <div class="searchBar">
+          <div class="searchSelector">
+            <select name="url" id="searchDropDownBox">
+              <option value="">All</option>
+              <option value="kitchen">Kitchen</option>
+              <option value="bedding">Bedding</option>
+              <option value="fashion">Fashion</option>
+              <option value="travel">Travel</option>
+              <option value="tech">Tech</option>
+            </select>
+          </div>
+          <div class="search">
+            <input id="search-input" type="text" placeholder="Search Amazon" />
+          </div>
+          <div class="submit"><i class="ri-search-line"></i></div>
+        </div>
+        <!-- Language selector -->
+        <div class="langSelector border">
+          <div class="flag">
+            <img src="https://flagsapi.com/US/flat/64.png" alt="" />
+          </div>
+          <div class="selectLang">
+            <select name="Language Selector" id="Language"></select>
+          </div>
+        </div>
+        <!-- Sigin div -->
+        <div
+          class="signin border"
+          onclick="window.location.href='sign-in/register.html'"
+        >
+          <div class="nav-line-1">
+            Hello, <span class="username">Sign-in</span>
+          </div>
+          <div class="nav-line-2">
+            Account & List<i class="ri-arrow-down-s-line"></i>
+          </div>
+          <!-- signin ovelay only shows if signin is not true -->
+          <div class="signInHover">
+            <button>Sign in</button>
+            <br />
+            <p>New customer? <a href="sign-in/register.html">Start here</a></p>
+          </div>
+        </div>
+        <!-- Order div -->
+        <div class="orders border">
+          <div class="nav-line-1">Returns</div>
+          <div class="nav-line-2">& Orders</div>
+        </div>
+        <!-- Cart div -->
+        <div class="cart border">
+          <div class="nav-line-1 cartList">0</div>
+          <div class="nav-line-2">
+            <i class="ri-shopping-cart-line"></i>Cart
+          </div>
+        </div>
+        <!-- Mobile signin -->
+        <div class="nav-left">
+          <div
+            class="signInUser"
+            onclick="window.location.href='sign-in/register.html'"
+          >
+            <span class="username">Sign-in</span><i class="ri-user-3-line"></i>
+          </div>
+          <!-- Mobile cart -->
+          <div class="cartAdd">
+            <div class="navLine"><i class="ri-shopping-cart-line"></i></div>
+          </div>
+        </div>
+      </nav>
+      <!-------------Horizontal Scrolls Bar for Mobile--------------->
+      <aside>
+        <p>Deals</p>
+        <p>Amazon Basics</p>
+        <p>Video</p>
+        <p>Buy Again</p>
+        <p>Best Seller</p>
+      </aside>
+      <!-- navbar pannel -->
+      <div class="pannel">
+        <left-pannel>
+          <p class="border menuBar"><i class="ri-menu-line"></i>All</p>
+          <p class="border">Today's Deals</p>
+          <p class="border">Coustomer Service</p>
+          <p class="border">Registry</p>
+          <p class="border">Gift Cards</p>
+          <p class="border">Sell</p>
+        </left-pannel>
+        <right-pannel>
+          <p
+            class="border"
+            onclick="window.location.href='products/product.html?category=tech'"
+          >
+            Shop the gamming Store
+          </p>
+        </right-pannel>
+        <div class="locationdiv">
+          <i class="ri-map-pin-line"
+            >Deliver to <span class="location-country"></span></i
+          ><i class="ri-arrow-down-s-line"></i>
+        </div>
+      </div>
+      <!-- burger menubar and overlay -->
+      <div class="overlay">
+        <div class="side-menu">
+          <div class="top-menu">
+            <div
+              class="user"
+              onclick="window.location.href='sign-in/register.html'"
+            >
+              <i class="ri-user-3-line"></i>
+            </div>
+            Hello,<span class="username">Sign-in</span>
+            <div class="cross" tabindex="0" aria-label="Close Menu">×</div>
+          </div>
+          <!-- menu options -->
+          <div class="menu-content">
+            <h3>Shop by department</h3>
+            <p data-category="toys">Toys</p>
+            <p data-category="tech">Tech</p>
+            <p data-category="kitchen">Kitchen</p>
+            <p data-category="bedding">Bedding</p>
+            <p data-category="apparels">Apparels</p>
+            <p data-category="fashion">Fashion</p>
+            <p data-category="watches">Watches</p>
+            <p data-category="sports">Sports</p>
+            <p data-category="travel">Travel</p>
+            <p data-category="decore">Decore</p>
+            <p data-category="books">Books</p>
+            <p data-category="shoes">Shoes</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--------------------Main------------------------->
+    <main id="main" class="forMobile">
+      <!-- arrows to change background image -->
+      <div class="arrows">
+        <i class="ri-arrow-left-wide-line leftArrow"></i>
+        <i class="ri-arrow-right-wide-line rightArrow"></i>
+      </div>
+      <!-- products renderd through main.js -->
+      <div class="cet1"></div>
+      <!-- Product div visible in both mobile and desktop -->
+      <div class="cet3"></div>
+      <!-- Additional product div -->
+
+      <!-- Footer Section -->
+      <footer
+        style="position: relative; background-color: #37475a; color: white"
+      >
+        <!-- First Section: Back to Top -->
+        <div style="text-align: center; padding: 10px 0">
+          <a
+            href="#top"
+            style="color: white; text-decoration: none; font-size: 16px"
+          >
+            <span>Back to top</span>
+            <span style="font-size: 20px; margin-left: 5px">↑</span>
+          </a>
+        </div>
+
+        <!-- Second Section: Social Links and Info -->
+        <div style="background-color: #232f3e; padding: 20px 0">
+          <div style="text-align: center; color: white; font-size: 16px">
+            <p>&copy; 2024 Amazon Clone made by Mehak Fatima Naqvi</p>
+            <div>
+              <!-- Social Media Icons -->
+              <a
+                href="https://github.com/kaniz-naqvi"
+                target="_blank"
+                class="social-icon"
+              >
+                <i class="ri-github-fill"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/mehak_fatima_naqvi_/"
+                target="_blank"
+                class="social-icon"
+              >
+                <i class="ri-instagram-fill"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/mehak-fatima-naqvi/"
+                target="_blank"
+                class="social-icon"
+              >
+                <i class="ri-linkedin-fill"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="main.js"></script>
+    <script src="index.js"></script>
+    <script type="module" src="flagsCurrency.js"></script>
+  </body>
+</html>
